@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <img class="close" src="/uploads/chicken-merge-thumbnail.jpg" alt="close game">
                             <img class="hideClose" src="/assets/image/svg/arrowleft.svg" alt="hide close game">
                         </div>
-                        <iframe id="iframehtml5" class="game-iframe w-[100%] h-[100%]" title="play game" src="https://ubg98.github.io/ChickenMerge/" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+                        <iframe id="iframehtml5" class="game-iframe w-[100%] h-[100%]" title="play game" src="https://ubg98.github.io/ChickenMerge/" frameborder="0" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="fullscreen; autoplay; clipboard-write; gamepad *;"></iframe>
                     </div>
                 </div>
                 <div class="qr_code">
@@ -297,4 +297,41 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
     
-  </main><footer class="container-fluid py-8 text-custom-text"><div class="flex gap-4 flex-wrap"><a href="#">github</a><a href="#">linkedin</a><a href="#">twitter</a><a href="#">youtube</a><a href="#">devpost</a></div></footer><button id="btn-page-scroll">↑</button><script src="/assets/js/main-head.js"></script><script src="/assets/js/main.js"></script><script src="/assets/js/test.js"></script></body></html>
+  </main><footer class="container-fluid py-8 text-custom-text"><div class="flex gap-4 flex-wrap"><a href="#">github</a><a href="#">linkedin</a><a href="#">twitter</a><a href="#">youtube</a><a href="#">devpost</a></div></footer><button id="btn-page-scroll">↑</button><script src="/assets/js/main-head.js"></script><script src="/assets/js/main.js"></script><script src="/assets/js/test.js"></script><script>
+document.addEventListener("click", function(e){
+  const btn = e.target.closest(".btn_fullscreen");
+  if(!btn) return;
+
+  const container = btn.closest(".game-container");
+  if(!container) return;
+
+  const iframe = container.querySelector(".game-iframe");
+  if(!iframe) return;
+
+  const target = iframe;
+
+  try {
+    if (!document.fullscreenElement) {
+      if (target.requestFullscreen) target.requestFullscreen();
+      else if (target.webkitRequestFullscreen) target.webkitRequestFullscreen();
+      else if (target.msRequestFullscreen) target.msRequestFullscreen();
+
+      document.body.classList.add("game-fullscreen-active");
+    } else {
+      if (document.exitFullscreen) document.exitFullscreen();
+      else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      else if (document.msExitFullscreen) document.msExitFullscreen();
+
+      document.body.classList.remove("game-fullscreen-active");
+    }
+  } catch(err) {
+    console.error("Fullscreen error:", err);
+  }
+});
+
+document.addEventListener("fullscreenchange", () => {
+  if (!document.fullscreenElement) {
+    document.body.classList.remove("game-fullscreen-active");
+  }
+});
+</script></body></html>
