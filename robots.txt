@@ -2,12 +2,6 @@ User-agent: *
 Disallow: */page/*
 Disallow: *?fbclid=*
 Disallow: /?s=*
-Disallow: /login/
-Disallow: *?fb_comment_id=*
-Disallow: *?sort=new
-Disallow: *?sort=popular
-
 Allow: /*.js$
 Allow: /*.css$
-
-Sitemap:https://driftboss-online.gitlab.io/sitemap.xml
+Sitemap:baseball-9-game.github.io/sitemap.xml

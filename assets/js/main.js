@@ -464,7 +464,12 @@ $("#load_game").on("click",function(){
 })
 
 
-$("#toggle-navbar").on("click",function(){
+$("#toggle-navbar, #close-navbar").on("click",function(){
+    $("#navbar-dropdown").toggleClass('open-nav');
+     $("#search-form").parent().toggleClass('header-search')
+})
+$("#toggle-search").on("click",function(){
+    $("#search-form").parent().toggleClass('header-search')
     $("#navbar-dropdown").toggleClass('open-nav')
 })
 
