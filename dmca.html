@@ -90,6 +90,7 @@
 
   #navbar-dropdown.sidebar{
     display:flex!important;
+    visibility:visible!important;
     position:fixed!important;
     top:0!important;
     left:0!important;
@@ -109,6 +110,11 @@
 
   #navbar-dropdown.sidebar.open-nav{
     transform:translateX(0)!important;
+    visibility:visible!important;
+  }
+
+  body.mobile-nav-open{
+    overflow:hidden;
   }
 
   .mobile-menu-backdrop{

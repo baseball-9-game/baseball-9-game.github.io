@@ -90,6 +90,7 @@
 
   #navbar-dropdown.sidebar{
     display:flex!important;
+    visibility:visible!important;
     position:fixed!important;
     top:0!important;
     left:0!important;
@@ -109,6 +110,11 @@
 
   #navbar-dropdown.sidebar.open-nav{
     transform:translateX(0)!important;
+    visibility:visible!important;
+  }
+
+  body.mobile-nav-open{
+    overflow:hidden;
   }
 
   .mobile-menu-backdrop{
@@ -196,7 +202,7 @@
         <nav class="lg:z-100">
             <div class="p-4 mx-auto text-black md:flex md:items-center md:gap-8 md:justify-between md:py-5 lg:py-3 lg:px-6 lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-10 border-b border-gray-800 lg:bg-black">
                 <div class="flex justify-between items-center md:gap-5 md:w-[100%]">
-                    <button id="toggle-navbar" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
+                    <button id="toggle-navbar" onclick="window.cmsToggleMobileNav && window.cmsToggleMobileNav(event)" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                         <img src="/assets/image/svg/toggle_menu.svg" alt="toggle menu">
@@ -206,7 +212,7 @@
                         <img src="/uploads/baseball-9-logo.png" class="h-[40px] block" alt="logo">
                     </a>
 
-                    <div id="toggle-search" class="w-[40px] h-[40px] p-2 sm:order-2 lg:hidden">
+                    <div id="toggle-search" onclick="window.cmsToggleMobileSearch && window.cmsToggleMobileSearch(event)" class="w-[40px] h-[40px] p-2 sm:order-2 lg:hidden">
                         <img src="/assets/image/svg/toggle_search.svg" alt="toogle search">
                     </div>
 
@@ -221,8 +227,8 @@
                     </div>
                 </div>
 
-                <div class="hidden sidebar" id="navbar-dropdown">
-                    <div class="close lg:hidden" id="close-navbar">
+                <div class="sidebar" id="navbar-dropdown">
+                    <div class="close lg:hidden" id="close-navbar" onclick="window.cmsCloseMobileNav && window.cmsCloseMobileNav(event)">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#0F0F0F"></path> </g></svg>
                     </div>
                     <a class="item_right text-base" href="https://baseball-9-game.github.io/car.html" title="Car" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Car</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/sports.html" title="Sports" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Sports</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/racing.html" title="Racing" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Racing</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/shooting.html" title="Shooting" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Shooting</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/arcade.html" title="Arcade" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Arcade</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/platformer.html" title="Platformer" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Platformer</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/strategy.html" title="Strategy" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Strategy</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/simulation.html" title="Simulation" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Simulation</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/puzzle.html" title="Puzzle" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Puzzle</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/idle.html" title="Idle" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Idle</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/clicker.html" title="Clicker" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Clicker</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/pixel.html" title="Pixel" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Pixel</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/adventure.html" title="Adventure" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Adventure</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/fighting.html" title="Fighting" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Fighting</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/merge.html" title="Merge" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Merge</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/jump-and-run.html" title="Jump &amp; Run" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Jump &amp; Run</span></a>
@@ -234,106 +240,125 @@
         </nav>
     </header><script id="cms-search-data" type="application/json">[{"title":"Mr Bullet","slug":"mr-bullet","thumbnail":"/uploads/mr-bullet-thumbnail.jpg"},{"title":"Geometry Jump","slug":"geometry-jump","thumbnail":"/uploads/geometry-jump-thumbnail-1.jpg"},{"title":"Little Alchemy 2","slug":"little-alchemy-2","thumbnail":"/uploads/little-alchemy-2-thumbnail-1.jpg"},{"title":"Cookie Clicker 2","slug":"cookie-clicker-2","thumbnail":"/uploads/cookie-clicker-2-thumbnail.jpg"},{"title":"Drive Mad","slug":"drive-mad","thumbnail":"/uploads/drive-mad-thumbnail.jpg"},{"title":"Boxing Random","slug":"boxing-random","thumbnail":"/uploads/boxing-random-thumbnail.jpg"},{"title":"Bouncy Woods","slug":"bouncy-woods","thumbnail":"/uploads/bouncy-woods-thumbnail.jpg"},{"title":"Chicken Merge","slug":"chicken-merge","thumbnail":"/uploads/chicken-merge-thumbnail.jpg"},{"title":"Ball Sort Soccer","slug":"ball-sort-soccer","thumbnail":"/uploads/ball-sort-soccer-thumbnail.jpg"},{"title":"Vex 8","slug":"vex-8","thumbnail":"/uploads/vex-8-thumbnail.jpg"},{"title":"Ball Sort Halloween","slug":"ball-sort-halloween","thumbnail":"/uploads/ball-sort-halloween-thumbnail.jpg"},{"title":"Super Mario Wonder","slug":"super-mario-wonder","thumbnail":"/uploads/super-mario-wonder-thumbnail.jpg"},{"title":"Tag","slug":"tag","thumbnail":"/uploads/tag-thumbnail.jpg"},{"title":"Stick Merge 2","slug":"stick-merge-2","thumbnail":"/uploads/stick-merge-2-thumbnail.jpg"},{"title":"Rusher Crusher","slug":"rusher-crusher","thumbnail":"/uploads/rusher-crusher-thumbnail.jpg"},{"title":"Papa Cherry Saga","slug":"papa-cherry-saga","thumbnail":"/uploads/papa-cherry-saga-thumbnail.jpg"},{"title":"Rooftop Snipers","slug":"rooftop-snipers","thumbnail":"/uploads/rooftop-snipers-thumbnail.jpg"},{"title":"Space Bar Clicker","slug":"space-bar-clicker","thumbnail":"/uploads/space-bar-clicker-thumbnail.jpg"},{"title":"Heads Arena Soccer All Stars","slug":"heads-arena-soccer-all-stars","thumbnail":"/uploads/heads-arena-soccer-all-stars-thumbnail.jpg"}]</script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const nav = document.getElementById("navbar-dropdown");
-  const toggle = document.getElementById("toggle-navbar");
-  const close = document.getElementById("close-navbar");
-  const searchToggle = document.getElementById("toggle-search");
-  const searchInput = document.getElementById("search-input");
-  const searchResults = document.getElementById("search-results");
-  const searchBox = document.querySelector(".header-search");
-  const backdrop = document.getElementById("mobile-menu-backdrop");
+(function(){
+  function getEls(){
+    return {
+      nav: document.getElementById("navbar-dropdown"),
+      toggle: document.getElementById("toggle-navbar"),
+      close: document.getElementById("close-navbar"),
+      backdrop: document.getElementById("mobile-menu-backdrop"),
+      searchToggle: document.getElementById("toggle-search"),
+      searchBox: document.querySelector(".header-search"),
+      searchInput: document.getElementById("search-input"),
+      searchResults: document.getElementById("search-results")
+    };
+  }
 
-  function openNav() {
-    if (!nav) return;
-    closeSearch();
-    nav.classList.add("open-nav");
-    nav.classList.remove("hidden");
-    nav.style.transform = "translateX(0)";
-    if (backdrop) backdrop.classList.add("show");
+  window.cmsOpenMobileNav = function(e){
+    if(e) e.preventDefault();
+    const els = getEls();
+    if(!els.nav) return false;
+    window.cmsCloseMobileSearch();
+    els.nav.classList.add("open-nav");
+    els.nav.classList.remove("hidden");
+    els.nav.style.transform = "translateX(0)";
+    els.nav.style.display = "flex";
+    if(els.backdrop) els.backdrop.classList.add("show");
     document.body.classList.add("mobile-nav-open");
-    if (toggle) toggle.setAttribute("aria-expanded", "true");
-  }
+    if(els.toggle) els.toggle.setAttribute("aria-expanded", "true");
+    return false;
+  };
 
-  function closeNav() {
-    if (!nav) return;
-    nav.classList.remove("open-nav");
-    nav.classList.remove("hidden");
-    nav.style.transform = "";
-    if (backdrop) backdrop.classList.remove("show");
+  window.cmsCloseMobileNav = function(e){
+    if(e) e.preventDefault();
+    const els = getEls();
+    if(!els.nav) return false;
+    els.nav.classList.remove("open-nav");
+    els.nav.classList.remove("hidden");
+    els.nav.style.transform = "";
+    els.nav.style.display = "";
+    if(els.backdrop) els.backdrop.classList.remove("show");
     document.body.classList.remove("mobile-nav-open");
-    if (toggle) toggle.setAttribute("aria-expanded", "false");
-  }
+    if(els.toggle) els.toggle.setAttribute("aria-expanded", "false");
+    return false;
+  };
 
-  function openSearch() {
-    if (!searchBox) return;
-    closeNav();
-    searchBox.classList.add("open-search");
-    searchBox.classList.remove("hidden");
-    if (searchInput) setTimeout(() => searchInput.focus(), 30);
-  }
+  window.cmsToggleMobileNav = function(e){
+    if(e) e.preventDefault();
+    const els = getEls();
+    if(els.nav && els.nav.classList.contains("open-nav")) return window.cmsCloseMobileNav(e);
+    return window.cmsOpenMobileNav(e);
+  };
 
-  function closeSearch() {
-    if (!searchBox) return;
-    searchBox.classList.remove("open-search");
-    if (window.innerWidth < 1024) searchBox.classList.add("hidden");
-    if (searchResults) {
-      searchResults.style.display = "none";
+  window.cmsOpenMobileSearch = function(e){
+    if(e) e.preventDefault();
+    const els = getEls();
+    if(!els.searchBox) return false;
+    window.cmsCloseMobileNav();
+    els.searchBox.classList.add("open-search");
+    els.searchBox.classList.remove("hidden");
+    if(els.searchInput) setTimeout(function(){ els.searchInput.focus(); }, 30);
+    return false;
+  };
+
+  window.cmsCloseMobileSearch = function(e){
+    if(e) e.preventDefault();
+    const els = getEls();
+    if(!els.searchBox) return false;
+    els.searchBox.classList.remove("open-search");
+    if(window.innerWidth < 1024) els.searchBox.classList.add("hidden");
+    if(els.searchResults) els.searchResults.style.display = "none";
+    return false;
+  };
+
+  window.cmsToggleMobileSearch = function(e){
+    if(e) e.preventDefault();
+    const els = getEls();
+    if(els.searchBox && els.searchBox.classList.contains("open-search")) return window.cmsCloseMobileSearch(e);
+    return window.cmsOpenMobileSearch(e);
+  };
+
+  function initMobileHeader(){
+    const els = getEls();
+
+    if(els.toggle && !els.toggle.dataset.cmsBound){
+      els.toggle.dataset.cmsBound = "1";
+      els.toggle.addEventListener("click", window.cmsToggleMobileNav, true);
     }
-  }
 
-  if (toggle) {
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (nav && nav.classList.contains("open-nav")) closeNav();
-      else openNav();
-    });
-  }
-
-  if (close) {
-    close.addEventListener("click", function (e) {
-      e.preventDefault();
-      closeNav();
-    });
-  }
-
-  if (backdrop) {
-    backdrop.addEventListener("click", function (e) {
-      e.preventDefault();
-      closeNav();
-      closeSearch();
-    });
-  }
-
-  if (searchToggle) {
-    searchToggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (searchBox && searchBox.classList.contains("open-search")) closeSearch();
-      else openSearch();
-    });
-  }
-
-  document.addEventListener("keydown", function(e){
-    if(e.key === "Escape"){
-      closeNav();
-      closeSearch();
+    if(els.close && !els.close.dataset.cmsBound){
+      els.close.dataset.cmsBound = "1";
+      els.close.addEventListener("click", window.cmsCloseMobileNav, true);
     }
-  });
 
-  document.addEventListener("click", function(e){
-    if(nav && nav.classList.contains("open-nav")){
-      if(!nav.contains(e.target) && !toggle?.contains(e.target)) closeNav();
+    if(els.searchToggle && !els.searchToggle.dataset.cmsBound){
+      els.searchToggle.dataset.cmsBound = "1";
+      els.searchToggle.addEventListener("click", window.cmsToggleMobileSearch, true);
     }
-    if(searchBox && searchBox.classList.contains("open-search")){
-      if(!searchBox.contains(e.target) && !searchToggle?.contains(e.target)) closeSearch();
+
+    if(els.backdrop && !els.backdrop.dataset.cmsBound){
+      els.backdrop.dataset.cmsBound = "1";
+      els.backdrop.addEventListener("click", function(e){
+        window.cmsCloseMobileNav(e);
+        window.cmsCloseMobileSearch(e);
+      }, true);
     }
-  });
+
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape"){
+        window.cmsCloseMobileNav();
+        window.cmsCloseMobileSearch();
+      }
+    }, { once:false });
+  }
 
   let games = [];
-  try {
-    const el = document.getElementById("cms-search-data");
-    games = el ? JSON.parse(el.textContent || "[]") : [];
-  } catch (e) { games = []; }
+  function loadGames(){
+    try {
+      const el = document.getElementById("cms-search-data");
+      games = el ? JSON.parse(el.textContent || "[]") : [];
+    } catch(e) { games = []; }
+  }
 
   function escapeHtml(text) {
     return String(text || "").replace(/[&<>"']/g, function (m) {
@@ -342,6 +367,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderSearchResults(keyword) {
+    const els = getEls();
+    const searchResults = els.searchResults;
     if (!searchResults) return;
     const q = String(keyword || "").trim().toLowerCase();
     if (!q) {
@@ -367,21 +394,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }).join("");
   }
 
-  if (searchInput) {
-    searchInput.addEventListener("input", function () { renderSearchResults(this.value); });
+  function initSearch(){
+    const els = getEls();
+    if(els.searchInput && !els.searchInput.dataset.cmsBound){
+      els.searchInput.dataset.cmsBound = "1";
+      els.searchInput.addEventListener("input", function(){ renderSearchResults(this.value); });
+    }
+
+    document.querySelectorAll("#search-form").forEach(function(form){
+      if(form.dataset.cmsBound) return;
+      form.dataset.cmsBound = "1";
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        const input = document.getElementById("search-input");
+        const q = input ? input.value.trim() : "";
+        if(!q) return;
+        const first = games.find(g => String(g.title || "").toLowerCase().includes(q.toLowerCase()) || String(g.slug || "").toLowerCase().includes(q.toLowerCase()));
+        if(first) window.location.href = "/" + first.slug + ".html";
+      });
+    });
   }
 
-  const forms = document.querySelectorAll("#search-form");
-  forms.forEach(function(form){
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const q = searchInput ? searchInput.value.trim() : "";
-      if (!q) return;
-      const first = games.find(g => String(g.title || "").toLowerCase().includes(q.toLowerCase()) || String(g.slug || "").toLowerCase().includes(q.toLowerCase()));
-      if (first) window.location.href = "/" + first.slug + ".html";
-    });
-  });
-});
+  function boot(){
+    loadGames();
+    initMobileHeader();
+    initSearch();
+  }
+
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
 </script><main class="container-fluid mt-12 lg:p-3 text-custom-text"><h1>Jump &amp; Run</h1><div class="ct-contents"></div></main><footer class=" border-t border-gray-700">
     <div class="container-fluid px-3 mx-auto text-[#E1E1E199] py-[0px!important]">
     <section class="flex flex-wrap mb-4 flex-col gap-4 pt-6 lg:flex-row">
