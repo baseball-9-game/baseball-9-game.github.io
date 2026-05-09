@@ -11,11 +11,11 @@ img {
 }
 
 $main : #FFF;
-$bkcontainer : rgb(13 16 45 / 1);;
-$bkhead:#ffffff1a;
+$bkcontainer : #000;
+$bkhead:#000;
 $bkbox :#003d68;
 $textp: #67798b;
-$texth: #FFF;
+$texth: #989899;
 $active_menu: rgb(240, 240, 240);
 $border_item:rag;
 $color_text:white;
@@ -24,6 +24,7 @@ $size_border:12px;
 $bg_header:rgba(33,34,51,.9);
 body{
 
+    // background: linear-gradient(170deg, #b6e3fd 0%, rgb(47 161 228) 100%);
     background-size: cover;
     background-attachment: fixed;
     color: rgb(0, 0, 0);
@@ -364,10 +365,10 @@ body{
 #adminBar {
     position: fixed;
     left: 0;
-    bottom: 130px;
+    bottom: 70px;
     background: 0 0;
-    z-index: 9;
-    padding: 0 20px;
+    z-index: 9999;
+    padding: 0 16px;
     text-align: center;
 
     a {
@@ -426,7 +427,9 @@ body{
 body {
     background-color: $bkcontainer!important;
 }
-
+header,footer{
+    background-color: $bkhead;
+}
 #header {
     padding: 10px;
     position: relative;
@@ -881,6 +884,7 @@ body {
 
 footer {
     margin-top: 22px;
+    background-color: $bkhead!important;
     .foot-wrp {
         display: flex;
         flex-direction: column;
@@ -2047,18 +2051,12 @@ footer {
             padding: 8px;
         }
         svg,img{
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
             fill: #fff;
             display: inline-block;
             margin-top: -3px;
             margin-right: 6px;
-            transition: all 400ms ease;
-        }
-        &:hover{
-            svg,img{
-                transform: scale(1.5);
-            }
         }
         
     }
@@ -2413,24 +2411,13 @@ footer {
 }
 
 
+
 .pageOnlyIframe {
-    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
     background-color: white;
     position: relative;
-    height: 100vh;
-    iframe{
-        width: 100%;
-        height: 100%;
-        border-top-width: 0px;
-        border-bottom-width: 0px;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-color: #fff;
-    }
-
+    overflow: hidden;
     .bg_thumb{
         position: absolute;
         top: 0;
@@ -2595,7 +2582,6 @@ footer {
     }
 }
 
-
 .footer_logo{
     display: flex;
     flex-direction: column;
@@ -2677,8 +2663,8 @@ footer {
 .list_footer{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 50px;
+    align-items: center;
+    gap: 16px;
     .title{
         text-transform: uppercase;
         font-size: 1.1rem;
@@ -2692,7 +2678,7 @@ footer {
         flex-wrap: wrap;
         gap: 12px;
         .item_right{
-            width: 100%;
+            width: calc(50% - 6px);
             color:$color_text;
             padding: 4px 6px;
             padding-left: 19px;
@@ -2718,6 +2704,9 @@ footer {
         &.cate{
             
         }
+    }
+    .icon_footer{
+        display: none;
     }
 }
 
@@ -2756,17 +2745,15 @@ footer {
 }
 .item_home{
     position: relative;
+    transition: all 200ms ease;
     .list-title{
-        opacity: 0;
-        transition: all 200ms ease;
-        padding: -24px;
+        transition: all 400ms ease;
+        padding-bottom: 12px;
+        text-transform: capitalize;
+        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0) 56%);
     }
     &:hover{
-        .list-title{
-            opacity: 1;
-            background-color: rgba($color: #000, $alpha: 0.7);
-            padding-bottom: 12px;
-        }
+        transform: translateY(-12px);
     }
 }
 .game_play{
@@ -3037,18 +3024,41 @@ footer {
 
 
 .open-nav{
-    margin-top: 12px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    .item_right{
-        border-radius: 8px;
-        width: 100%;
-        padding: 4px 8px;
-        color:white;
-        &:active{
-            background-color: #000;
+    position: fixed;
+    width: 290px;
+    top: 0;left: 0;bottom: 0;
+    z-index: 10;
+    padding: 0 12px;
+    padding-top: 72px;
+    background-color: #1c1c1e;
+
+    .close{
+        position: absolute;
+        top: 12px;right: 12px;
+        width:24px;
+        height: 24px;
+        svg path{
+            fill:#989899
         }
+    }
+}
+.item_right{
+    width: 100%;
+    padding: 12px;
+    color:$texth;
+    display: flex;
+    gap: 12px;
+    svg{
+        width: 24px;
+        height: 24px;
+        path{
+            fill:#1c1c1e
+        }
+    }
+    &:active{
+        background-color: #000;
     }
 }
 
@@ -3066,14 +3076,12 @@ footer {
 .game-content{
     height: 100vh;
     max-height: 500px;
-
-    .link-game{
-        height: 100%;
-        overflow: hidden;
-        overflow-y: auto;
-    }
+    position: relative;
+    max-width: 100%;
     iframe{
-        max-width: 100%;
+        position: absolute;
+        left: 0;bottom: 0;right: 0;right: 0;
+        width: 100%;
         height: 100%;
     }
 }
@@ -3115,6 +3123,17 @@ footer {
         }
     }
 }
+
+.label-game{
+    box-shadow: 6px 2px 12px 0 rgba(67, 61, 77, 0.45);
+    background: linear-gradient(142deg, #fbce30, #fb6d30 73.96%);
+
+    &.type_2{
+        background: linear-gradient(142deg, #e23a77, #6424db);
+    }
+}
+
+
 @media (min-width: 550px) {
     .main-info{
         .silebar-about{
@@ -3204,9 +3223,6 @@ footer {
         }
     }
     .list_footer{
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 0;
         .item_footer{
             width: 100%;
         }
@@ -3231,7 +3247,6 @@ footer {
         text-align: center;
     }
     .pageOnlyIframe {
-
         .bg_playgame{
             padding: 15px 30px;
             top: 50%;
@@ -3240,6 +3255,7 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 16px;
             .left{
                 width: 70%;
             }
@@ -3258,7 +3274,6 @@ footer {
             }
             .btn_playgame{
                 margin: 0;
-                margin-top: 40px;
             }
         }
     }
@@ -3447,7 +3462,23 @@ footer {
     }
 
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) { 
+    .item_right{
+        padding: 16px;
+        
+    }
+    .sidebar{
+        background-color: #000;
+        span{
+            display: none;
+        }
+        &:hover{
+            span{
+                display: block;
+            }
+        }
+    }
+
     .page_404{
 
         .left{
@@ -3470,22 +3501,7 @@ footer {
             display: block;
         }
     }
-    .list_footer{
-        width: calc(50% - 8px);
-        .item_footer{
-            &.cate{
-                .menu_footer{
-                    .item_right{
-                        width: calc(33.33333333333%);
-                    }
-                }
-            }
-        }
-    }
-    .social{
-        width: calc(50% - 8px);
 
-    }
     .list_game_hot{
         .item{
             width: calc(50% - 10px);
@@ -3890,6 +3906,7 @@ footer {
     }
 }
 @media (min-width: 1280px) {
+
     .game-content{
         max-height: 600px;
     }
@@ -3997,6 +4014,7 @@ footer {
     
 }
 @media (min-width: 1440px) {
+
     .container{
         max-width: 1600px!important;
     }
@@ -4017,8 +4035,14 @@ footer {
         }
     }
 }
-@media (min-width: 1800px) {
+@media (min-width: 96rem) {
+    .sidebar{
+        background-color: #000;
+        span{
+            display: block;
+        }
 
+    }
 }
 
 #cookie-notice-bar.show {
@@ -4042,62 +4066,5 @@ footer {
 .imghotgame {
     width: 100%;
     object-fit: cover;
-}
-
-
-
-.category-index{
-    &:hover{
-        background-color: #8358ff;
-    }
-}
-
-.search-result-item{
-    &:hover{
-        border:1px solid violet;
-        color:violet
-    }
-}
-
-.animate-fly{
-    animation: jumpp 2s ease infinite;
-}
-
-@keyframes jumpp {
-    0%{
-        top :0
-    }
-    50%{
-        top:50px
-    }
-    100%{
-        top:0
-    }
-}
-
-.linear_gradiend_index {
-    background: linear-gradient(-45deg, rgba(216, 191, 216, 0.3) 0%, rgba(128, 0, 128, 0.6) 50%, rgba(75, 0, 130, 0.8) 100%);
-    // background: linear-gradient(-45deg, rgba(102, 51, 153, 0.6), rgba(192, 192, 192, 0.4)); /* Tím khói trong suốt -> Xám bạc trong suốt */
-    // background: linear-gradient(-45deg, rgba(153, 50, 204, 0.7), rgba(255, 0, 255, 0.5)); /* Tím neon trong suốt -> Hồng neon trong suốt */
-    // background: linear-gradient(-45deg, rgba(128, 0, 128, 0.6), rgba(255, 255, 224, 0.4)); /* Tím trong suốt -> Vàng nhạt trong suốt */ 
-    // background: linear-gradient(-45deg, rgba(138, 43, 226, 0.4), rgba(128, 0, 128, 0.7)); /* Xanh tím trong suốt -> Tím trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(138, 43, 226, 0.4), rgba(128, 0, 128, 0.7)); /* Xanh tím trong suốt -> Tím trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(219, 112, 147, 0.5), rgba(128, 0, 128, 0.8)); /* Tím hồng trong suốt -> Tím trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(230, 230, 250, 0.4), rgba(75, 0, 130, 0.7)); /* Tím oải hương trong suốt -> Tím than trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(216, 191, 216, 0.5), rgba(128, 0, 128, 0.8)); /* Tím lavender trong suốt -> Tím đậm trong suốt hơn */  
-    // background: linear-gradient(-45deg, rgba(210, 180, 140, 0.6), rgba(245, 245, 220, 0.8)); /* Nâu nhạt trong suốt -> Be trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(255, 99, 71, 0.5), rgba(255, 165, 0, 0.8)); /* Đỏ nhạt trong suốt -> Cam trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(255, 165, 0, 0.4), rgba(255, 255, 0, 0.7)); /* Cam nhạt trong suốt -> Vàng trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(255, 255, 224, 0.4), rgba(173, 216, 230, 0.6)); /* Vàng nhạt trong suốt -> Xanh baby blue trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(255, 182, 193, 0.5), rgba(216, 191, 216, 0.7)); /* Hồng nhạt trong suốt -> Tím lavender trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(0, 255, 255, 0.6), rgba(0, 191, 255, 0.8)); /* Xanh lơ sáng hơn trong suốt -> Xanh ngọc trong suốt hơn */
-    // background: linear-gradient(-45deg, rgba(13, 16, 45, 0.3), rgba(128, 0, 128, 0.7)); /* Xanh lơ trong suốt 70% -> Tím trong suốt 30% */
-    // background: radial-gradient(circle, rgba(13, 16, 45, 0.7), rgba(128, 0, 128, 0.3) transparent);
-    // background: radial-gradient(ellipse farthest-corner at center, rgba(13, 16, 45, 0.7), rgba(128, 0, 128, 0.3) 70%, transparent 100%);
-    // background: linear-gradient(170deg, #b6e3fd 0%, rgb(47 161 228) 100%);
-    // background: linear-gradient(65deg, #143195 0%, #182a67 100%);
-    position: absolute;left: 0;right: 0;top:0;
-    z-index: -1;
-
 }
 
