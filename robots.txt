@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: */page/*
+Disallow: *?fbclid=*
+Disallow: /?s=*
+Allow: /*.js$
+Allow: /*.css$
+Sitemap:baseball-9-game.github.io/sitemap.xml
