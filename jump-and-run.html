@@ -233,6 +233,9 @@
 @media (min-width: 1024px){
   #toggle-search{display:none!important}
 }
+</style><style>/* cms-language-switcher */
+.language-switcher select{background:#111;color:#fff;border:1px solid #374151;border-radius:4px;padding:10px 12px}
+@media(max-width:1023px){.language-switcher{position:absolute;right:56px;top:50%;transform:translateY(-50%);z-index:90}.language-switcher select{max-width:105px;padding:8px}}
 </style></head><body  class="">
 
     <div id="adminBar" data-pid="1" data-ptype="p"></div>
@@ -254,6 +257,12 @@
                     <div id="toggle-search" onclick="window.cmsToggleMobileSearch && window.cmsToggleMobileSearch(event)" class="hidden">
                         <img src="/assets/image/svg/toggle_search.svg" alt="toogle search">
                     </div>
+
+                    <div class="language-switcher">
+    <select aria-label="Language" onchange="if(this.value) window.location.href=this.value">
+      <option value="/en/" > English</option><option value="/" selected>🇮🇩 Indonesia</option>
+    </select>
+  </div>
 
                     <div class="relative hidden lg:block header-search">
                         <form id="search-form" class="search-form">
