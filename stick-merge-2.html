@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="/assets/css/tailwind.css?v=759" />
 
-    <meta name="googlebot" content="noindex"><meta name="googlebot-news" content="snippet"><meta name="robots" content="noindex, nofollow"><title>Stick Merge 2</title><meta name="description" content="Join Stick Merge 2 online. Merge weapons to upgrade your firepower and eliminate stickman enemies in this tactical shooter."><meta property="og:type" content="article"><meta property="og:site_name" content="HTML5 Games"><meta property="og:url" content="https://baseball-9-game.github.io/stick-merge-2.html"><meta property="og:title" content="Stick Merge 2"><meta property="og:description" content="Join Stick Merge 2 online. Merge weapons to upgrade your firepower and eliminate stickman enemies in this tactical shooter."><meta property="og:image" content="https://baseball-9-game.github.io/uploads/stick-merge-2-thumbnail.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Stick Merge 2"><meta name="twitter:description" content="Join Stick Merge 2 online. Merge weapons to upgrade your firepower and eliminate stickman enemies in this tactical shooter."><meta name="twitter:image" content="https://baseball-9-game.github.io/uploads/stick-merge-2-thumbnail.jpg"><link rel="canonical" href="https://baseball-9-game.github.io/stick-merge-2.html"><meta property="og:locale" content="EN">
+    <meta name="googlebot" content="noindex"><meta name="googlebot-news" content="nosnippet"><meta name="robots" content="noindex, nofollow"><title>Stick Merge 2</title><meta name="description" content="Join Stick Merge 2 online. Merge weapons to upgrade your firepower and eliminate stickman enemies in this tactical shooter."><meta property="og:type" content="article"><meta property="og:site_name" content="HTML5 Games"><meta property="og:url" content="https://baseball-9-game.github.io/stick-merge-2.html"><meta property="og:title" content="Stick Merge 2"><meta property="og:description" content="Join Stick Merge 2 online. Merge weapons to upgrade your firepower and eliminate stickman enemies in this tactical shooter."><meta property="og:image" content="https://baseball-9-game.github.io/uploads/stick-merge-2-thumbnail.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Stick Merge 2"><meta name="twitter:description" content="Join Stick Merge 2 online. Merge weapons to upgrade your firepower and eliminate stickman enemies in this tactical shooter."><meta name="twitter:image" content="https://baseball-9-game.github.io/uploads/stick-merge-2-thumbnail.jpg"><link rel="canonical" href="https://baseball-9-game.github.io/stick-merge-2.html"><meta property="og:locale" content="EN">
 
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HTML5 Games","url":"https://baseball-9-game.github.io/","description":"Join Stick Merge 2 online. Merge weapons to upgrade your firepower and eliminate stickman enemies in this tactical shooter.","inLanguage":"en","image":"https://baseball-9-game.github.io/uploads/baseball-9-logo.png","hasPart":[{"@type":"CollectionPage","name":"Car","url":"https://baseball-9-game.github.io/car.html"},{"@type":"CollectionPage","name":"Sports","url":"https://baseball-9-game.github.io/sports.html"},{"@type":"CollectionPage","name":"Racing","url":"https://baseball-9-game.github.io/racing.html"},{"@type":"CollectionPage","name":"Shooting","url":"https://baseball-9-game.github.io/shooting.html"},{"@type":"CollectionPage","name":"Arcade","url":"https://baseball-9-game.github.io/arcade.html"},{"@type":"CollectionPage","name":"Platformer","url":"https://baseball-9-game.github.io/platformer.html"},{"@type":"CollectionPage","name":"Strategy","url":"https://baseball-9-game.github.io/strategy.html"},{"@type":"CollectionPage","name":"Simulation","url":"https://baseball-9-game.github.io/simulation.html"},{"@type":"CollectionPage","name":"Puzzle","url":"https://baseball-9-game.github.io/puzzle.html"},{"@type":"CollectionPage","name":"Idle","url":"https://baseball-9-game.github.io/idle.html"},{"@type":"CollectionPage","name":"Clicker","url":"https://baseball-9-game.github.io/clicker.html"},{"@type":"CollectionPage","name":"Pixel","url":"https://baseball-9-game.github.io/pixel.html"},{"@type":"CollectionPage","name":"Adventure","url":"https://baseball-9-game.github.io/adventure.html"},{"@type":"CollectionPage","name":"Fighting","url":"https://baseball-9-game.github.io/fighting.html"},{"@type":"CollectionPage","name":"Merge","url":"https://baseball-9-game.github.io/merge.html"},{"@type":"CollectionPage","name":"Jump & Run","url":"https://baseball-9-game.github.io/jump-and-run.html"}]}</script>
 
@@ -85,28 +85,42 @@
   #toggle-navbar,
   #toggle-search{
     position:relative;
-    z-index:80;
+    z-index:160;
   }
 
   #navbar-dropdown.sidebar{
-    display:none!important;
+    display:flex!important;
+    position:fixed!important;
+    top:0!important;
+    left:0!important;
+    bottom:0!important;
+    width:288px!important;
+    max-width:82vw!important;
+    background:#1b1d21!important;
+    z-index:200!important;
+    padding:76px 18px 20px!important;
+    flex-direction:column!important;
+    gap:0!important;
+    overflow-y:auto!important;
+    box-shadow:8px 0 24px rgba(0,0,0,.45)!important;
+    transform:translateX(-105%)!important;
+    transition:transform .25s ease!important;
   }
 
   #navbar-dropdown.sidebar.open-nav{
-    display:flex!important;
+    transform:translateX(0)!important;
+  }
+
+  .mobile-menu-backdrop{
+    display:none;
+  }
+
+  .mobile-menu-backdrop.show{
+    display:block!important;
     position:fixed;
-    top:0;
-    left:0;
-    bottom:0;
-    width:288px;
-    max-width:82vw;
-    background:#1b1d21;
-    z-index:120;
-    padding:76px 18px 20px;
-    flex-direction:column;
-    gap:0;
-    overflow-y:auto;
-    box-shadow:8px 0 24px rgba(0,0,0,.45);
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:180;
   }
 
   #navbar-dropdown .close{
@@ -119,11 +133,13 @@
     align-items:center;
     justify-content:center;
     cursor:pointer;
+    background:#f3f4f6;
+    border-radius:8px;
   }
 
   #navbar-dropdown .close svg{
-    width:24px!important;
-    height:24px!important;
+    width:20px!important;
+    height:20px!important;
   }
 
   #navbar-dropdown .item_right{
@@ -140,7 +156,7 @@
     top:70px;
     left:12px;
     right:12px;
-    z-index:110;
+    z-index:210;
     background:#111;
     padding:10px;
     border:1px solid #374151;
@@ -166,7 +182,7 @@
     left:0;
     right:0;
     top:calc(100% + 6px);
-    z-index:130;
+    z-index:230;
   }
 }
 @media (min-width: 1024px){
@@ -211,6 +227,7 @@
                     </div>
                     <a class="item_right text-base" href="https://baseball-9-game.github.io/car.html" title="Car" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Car</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/sports.html" title="Sports" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Sports</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/racing.html" title="Racing" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Racing</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/shooting.html" title="Shooting" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Shooting</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/arcade.html" title="Arcade" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Arcade</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/platformer.html" title="Platformer" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Platformer</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/strategy.html" title="Strategy" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Strategy</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/simulation.html" title="Simulation" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Simulation</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/puzzle.html" title="Puzzle" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Puzzle</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/idle.html" title="Idle" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Idle</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/clicker.html" title="Clicker" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Clicker</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/pixel.html" title="Pixel" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Pixel</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/adventure.html" title="Adventure" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Adventure</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/fighting.html" title="Fighting" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Fighting</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/merge.html" title="Merge" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Merge</span></a><a class="item_right text-base" href="https://baseball-9-game.github.io/jump-and-run.html" title="Jump &amp; Run" > <div class="w-[24x] h-[24px] icon_footer"> <img src="/assets/image/svg/cate.svg" alt="cate icon"> </div> <span>Jump &amp; Run</span></a>
                 </div>
+                <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
 
 
             </div>
@@ -225,19 +242,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search-input");
   const searchResults = document.getElementById("search-results");
   const searchBox = document.querySelector(".header-search");
+  const backdrop = document.getElementById("mobile-menu-backdrop");
 
   function openNav() {
     if (!nav) return;
     closeSearch();
     nav.classList.add("open-nav");
     nav.classList.remove("hidden");
+    nav.style.transform = "translateX(0)";
+    if (backdrop) backdrop.classList.add("show");
+    document.body.classList.add("mobile-nav-open");
     if (toggle) toggle.setAttribute("aria-expanded", "true");
   }
 
   function closeNav() {
     if (!nav) return;
     nav.classList.remove("open-nav");
-    nav.classList.add("hidden");
+    nav.classList.remove("hidden");
+    nav.style.transform = "";
+    if (backdrop) backdrop.classList.remove("show");
+    document.body.classList.remove("mobile-nav-open");
     if (toggle) toggle.setAttribute("aria-expanded", "false");
   }
 
@@ -270,6 +294,14 @@ document.addEventListener("DOMContentLoaded", function () {
     close.addEventListener("click", function (e) {
       e.preventDefault();
       closeNav();
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener("click", function (e) {
+      e.preventDefault();
+      closeNav();
+      closeSearch();
     });
   }
 
