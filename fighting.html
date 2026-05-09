@@ -57,6 +57,7 @@
     justify-content:space-between!important;
     width:100%!important;
   }
+
   header .logo{
     position:absolute;
     left:50%;
@@ -68,26 +69,104 @@
     overflow:hidden;
     white-space:nowrap;
   }
+
   header .logo img{
     max-height:40px;
     width:auto;
     object-fit:contain;
   }
+
   header .logo span{
     font-size:24px;
     line-height:1.1;
     color:#fff;
   }
-  header form#search-form{
-    display:none!important;
-  }
-  header .relative.hidden.lg:block{
-    display:none!important;
-  }
+
   #toggle-navbar,
   #toggle-search{
     position:relative;
-    z-index:2;
+    z-index:80;
+  }
+
+  #navbar-dropdown.sidebar{
+    display:none!important;
+  }
+
+  #navbar-dropdown.sidebar.open-nav{
+    display:flex!important;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    width:288px;
+    max-width:82vw;
+    background:#1b1d21;
+    z-index:120;
+    padding:76px 18px 20px;
+    flex-direction:column;
+    gap:0;
+    overflow-y:auto;
+    box-shadow:8px 0 24px rgba(0,0,0,.45);
+  }
+
+  #navbar-dropdown .close{
+    position:absolute;
+    top:16px;
+    right:16px;
+    width:32px;
+    height:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+
+  #navbar-dropdown .close svg{
+    width:24px!important;
+    height:24px!important;
+  }
+
+  #navbar-dropdown .item_right{
+    display:flex!important;
+    align-items:center;
+    gap:12px;
+    min-height:48px;
+    color:#bfc0d4;
+  }
+
+  header .header-search{
+    display:none!important;
+    position:fixed!important;
+    top:70px;
+    left:12px;
+    right:12px;
+    z-index:110;
+    background:#111;
+    padding:10px;
+    border:1px solid #374151;
+    border-radius:8px;
+  }
+
+  header .header-search.open-search{
+    display:block!important;
+  }
+
+  header .header-search form#search-form{
+    display:flex!important;
+    width:100%;
+    gap:8px;
+  }
+
+  header .header-search input#search-input{
+    width:100%;
+  }
+
+  header .header-search #search-results{
+    position:absolute;
+    left:0;
+    right:0;
+    top:calc(100% + 6px);
+    z-index:130;
   }
 }
 @media (min-width: 1024px){
@@ -115,7 +194,7 @@
                         <img src="/assets/image/svg/toggle_search.svg" alt="toogle search">
                     </div>
 
-                    <div class="relative hidden lg:block">
+                    <div class="relative hidden lg:block header-search">
                         <form id="search-form" class="search-form">
                         <input type="text" class="outline-0 px-4 py-3 border text-white bg-custom-bg rounded-[4px] focus:border-white" id="search-input" placeholder="Search games..." autocomplete="off">
                         <button type="submit w-[24px] h-[24px]">
@@ -143,13 +222,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("toggle-navbar");
   const close = document.getElementById("close-navbar");
   const searchToggle = document.getElementById("toggle-search");
-  const searchForm = document.getElementById("search-form");
   const searchInput = document.getElementById("search-input");
   const searchResults = document.getElementById("search-results");
   const searchBox = document.querySelector(".header-search");
 
   function openNav() {
     if (!nav) return;
+    closeSearch();
     nav.classList.add("open-nav");
     nav.classList.remove("hidden");
     if (toggle) toggle.setAttribute("aria-expanded", "true");
@@ -160,6 +239,23 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.classList.remove("open-nav");
     nav.classList.add("hidden");
     if (toggle) toggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openSearch() {
+    if (!searchBox) return;
+    closeNav();
+    searchBox.classList.add("open-search");
+    searchBox.classList.remove("hidden");
+    if (searchInput) setTimeout(() => searchInput.focus(), 30);
+  }
+
+  function closeSearch() {
+    if (!searchBox) return;
+    searchBox.classList.remove("open-search");
+    if (window.innerWidth < 1024) searchBox.classList.add("hidden");
+    if (searchResults) {
+      searchResults.style.display = "none";
+    }
   }
 
   if (toggle) {
@@ -177,14 +273,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (searchToggle && searchBox) {
+  if (searchToggle) {
     searchToggle.addEventListener("click", function (e) {
       e.preventDefault();
-      searchBox.classList.toggle("hidden");
-      searchBox.classList.toggle("open-search");
-      if (searchInput) searchInput.focus();
+      if (searchBox && searchBox.classList.contains("open-search")) closeSearch();
+      else openSearch();
     });
   }
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      closeNav();
+      closeSearch();
+    }
+  });
+
+  document.addEventListener("click", function(e){
+    if(nav && nav.classList.contains("open-nav")){
+      if(!nav.contains(e.target) && !toggle?.contains(e.target)) closeNav();
+    }
+    if(searchBox && searchBox.classList.contains("open-search")){
+      if(!searchBox.contains(e.target) && !searchToggle?.contains(e.target)) closeSearch();
+    }
+  });
 
   let games = [];
   try {
@@ -219,33 +330,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchResults.style.display = "block";
     searchResults.innerHTML = rows.map(function (g) {
-      const img = g.thumbnail ? '<img src="' + escapeHtml(g.thumbnail) + '" alt="' + escapeHtml(g.title) + '">' : '';
+      const img = g.thumbnail ? '<img src="' + escapeHtml(g.thumbnail) + '" alt="' + escapeHtml(g.title) + '">' : "";
       return '<a class="search-result-item" href="/' + escapeHtml(g.slug) + '.html">' + img + '<span>' + escapeHtml(g.title) + '</span></a>';
     }).join("");
   }
 
   if (searchInput) {
-    searchInput.addEventListener("input", function () {
-      renderSearchResults(searchInput.value);
-    });
+    searchInput.addEventListener("input", function () { renderSearchResults(this.value); });
   }
 
-  if (searchForm) {
-    searchForm.addEventListener("submit", function (e) {
+  const forms = document.querySelectorAll("#search-form");
+  forms.forEach(function(form){
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      const q = searchInput ? searchInput.value.trim().toLowerCase() : "";
+      const q = searchInput ? searchInput.value.trim() : "";
       if (!q) return;
-      const exact = games.find(g => String(g.title || "").toLowerCase() === q || String(g.slug || "").toLowerCase() === q);
-      const first = exact || games.find(g => String(g.title || "").toLowerCase().includes(q) || String(g.slug || "").toLowerCase().includes(q));
+      const first = games.find(g => String(g.title || "").toLowerCase().includes(q.toLowerCase()) || String(g.slug || "").toLowerCase().includes(q.toLowerCase()));
       if (first) window.location.href = "/" + first.slug + ".html";
     });
-  }
-
-  document.addEventListener("click", function (e) {
-    if (!searchResults || !searchBox) return;
-    if (!searchBox.contains(e.target) && e.target !== searchToggle) {
-      searchResults.style.display = "none";
-    }
   });
 });
 </script><main class="container-fluid mt-12 lg:p-3 text-custom-text"><h1>Fighting</h1><div class="ct-contents"></div><div class="container-fluid">
