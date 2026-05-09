@@ -192,7 +192,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-</script><!-- geometry-jump-game --><div class="container-fluid"><div class="flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-9"><section class="my-12 lg:p-3 area-mid text-custom-text"><div class="game-container show_qr rounded-[12px] overflow-hidden relative"><div class="game-content" data-id="2"><div class="link-game" id="full-game"><div class="closegame"><img class="close" src="/assets/image/svg/arrowleft.svg" alt="close game"><img class="hideClose" src="/assets/image/svg/arrowleft.svg" alt="hide close game"></div><iframe id="iframehtml5" class="game-iframe w-[100%] h-[100%]" title="play game" src="https://ubg98.github.io/GeometryJump/" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div><div class="flex flex-col justify-center p-3 bg-custom-gray gap-5 sm:flex-row sm:justify-between"><div class="flex items-center gap-2 m-0"><div class="w-[40px] h-[40px]"><img style="border-radius:12px" src="/uploads/geometry-jump-thumbnail-1.jpg" alt="Geometry Jump"></div><h1 class="text-xl" style="margin-bottom:0">Geometry Jump</h1></div><div class="fullscreen"><button class="btn_fullscreen cursor-pointer" title="fullscreen"><img src="/assets/svg/fullscreen.svg" alt="fullscreen"></button></div></div></div></section><section class="area-ads"></section></div></div><main class="my-12 lg:p-3 text-custom-text">
+</script><!-- geometry-jump-game -->
+<div class="container-fluid">
+    <div class="flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-9 gap-6">
+        <section class="my-12 area-game text-custom-text">
+            <div class="game-container show_qr overflow-hidden relative rounded-[4px]">
+                <div class="game-content" data-id="2">
+                    <div class="link-game" id="full-game">
+                        <div class="closegame cursor-pointer">
+                            <img class="close" src="/uploads/geometry-jump-thumbnail-1.jpg" alt="close game">
+                            <img class="hideClose" src="/assets/image/svg/arrowleft.svg" alt="hide close game">
+                        </div>
+                        <iframe id="iframehtml5" class="game-iframe w-[100%] h-[100%]" title="play game" src="https://ubg98.github.io/GeometryJump/" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                <div class="qr_code">
+                    <div class="imgQR">
+                    </div>
+                    <div class="titleQr">Continue on your phone or computer</div>
+                    <p class="descriptionQr">Play on your phone or tablet by scanning this QR code!</p>
+                </div>
+                <div class="control_game bg-[#211328] opacity-0 -z-[1] absolute bottom-0 right-0 md:right-3 w-[300px] h-[300px] p-6 rounded-[12px] overflow-y-scroll">
+
+                </div>
+                <div class="flex flex-col justify-center p-3 bg-custom-content gap-5 sm:flex-row sm:justify-between">
+
+                    <div class="w-[40px] h-[40px] hidden"><img style="border-radius: 12px;" src="/uploads/geometry-jump-thumbnail-1.jpg" alt="Geometry Jump"></div>
+
+                    <div class="flex items-center gap-2 m-0">
+                        <h1 class="text-xl" style="margin-bottom: 0;">Geometry Jump</h1>
+                    </div>
+
+                    <div class="fullscreen">
+                        <button class="btn_fullscreen cursor-pointer" title="fullscreen">
+                            <img src="/assets/svg/fullscreen.svg" alt="fullscreen">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="area-ads"></section>
+    </div>
+</div><main class="my-12 lg:p-3 text-custom-text">
     
     <div class="container-fluid">
     <div class="flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-9 gap-6">
