@@ -203,55 +203,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-</script><!-- rooftop-snipers-game -->
-<div class="container-fluid">
-    <div class="flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-9 gap-6">
-        <section class="my-12 area-game text-custom-text">
-            <div class="game-container show_qr overflow-hidden relative rounded-[4px]">
-                <div class="game-content" data-id="17">
-                    <div class="link-game" id="full-game">
-                        <div class="closegame cursor-pointer">
-                            <img class="close" src="/uploads/rooftop-snipers-thumbnail.jpg" alt="close game">
-                            <img class="hideClose" src="/assets/image/svg/arrowleft.svg" alt="hide close game">
+</script><!-- bastet-random-game -->
+    <div class="container-fluid">
+        <div class="flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-9">
+            <!-- content -->
+            <section class="mt-12 lg:p-3 area-game text-custom-text">
+                <div class="game-container show_qr rounded-[12px] overflow-hidden">
+                    <div class="game-content" data-id="17">
+                        <div class="link-game" id="full-game">
+                            <div class="closegame">
+                                <img class="close" src="/uploads/baseball-9-favicon.png" alt="close game">
+                                <img class="hideClose" src="baseball-9-game.github.io/assets/image/svg/arrowleft.svg" alt="hide close game">
+                            </div>
+                            <iframe id="iframehtml5" class="game-iframe" style="width: 100%; border: none;" title="play game" src="/embed/rooftop-snipers.html" frameborder="0" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="fullscreen; autoplay; clipboard-write; gamepad *;"></iframe>
                         </div>
-                        <iframe id="iframehtml5" class="game-iframe w-[100%] h-[100%]" title="play game" src="https://ubg98.github.io/RooftopSnipers/" frameborder="0" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="fullscreen; autoplay; clipboard-write; gamepad *;"></iframe>
-                    </div>
-                </div>
-                <div class="qr_code">
-                    <div class="imgQR">
-                    </div>
-                    <div class="titleQr">Continue on your phone or computer</div>
-                    <p class="descriptionQr">Play on your phone or tablet by scanning this QR code!</p>
-                </div>
-                <div class="control_game bg-[#211328] opacity-0 -z-[1] absolute bottom-0 right-0 md:right-3 w-[300px] h-[300px] p-6 rounded-[12px] overflow-y-scroll">
-
-                </div>
-                <div class="flex flex-col justify-center p-3 bg-custom-content gap-5 sm:flex-row sm:justify-between">
-
-                    <div class="w-[40px] h-[40px] hidden"><img style="border-radius: 12px;" src="/uploads/rooftop-snipers-thumbnail.jpg" alt="Rooftop Snipers"></div>
-
-                    <div class="flex items-center gap-2 m-0">
-                        <h1 class="text-xl" style="margin-bottom: 0;">Rooftop Snipers</h1>
                     </div>
 
-                    <div class="fullscreen">
-                        <button class="btn_fullscreen cursor-pointer" title="fullscreen">
-                            <img src="/assets/svg/fullscreen.svg" alt="fullscreen">
-                        </button>
+                    <div class="flex justify-between p-3 bg-custom-gray gap-5 sm:flex-row sm:justify-between">
+                        <div class="flex items-center gap-2 m-0">
+                            <div class="w-[40px] h-[40px]"><img style="border-radius: 12px;" src="/uploads/rooftop-snipers-thumbnail.jpg" alt="Rooftop Snipers"></div>
+                            <h1 class="text-xl lg:text-2xl" style="margin-bottom: 0;">Rooftop Snipers</h1>
+                        </div>
+
+                        <div class="flex items-center gap-5 justify-around">
+                            <div class="fullscreen">
+                                <button class="btn_fullscreen cursor-pointer" title="fullscreen">
+                                    <img src="baseball-9-game.github.io/assets/svg/fullscreen.svg" alt="fullscreen">
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </section>
-        <section class="area-ads"></section>
-    </div>
-</div><main class="lg:p-3 text-custom-text">
-    
+            </section>
+            <!-- ads -->
+            <section class="mt-12 lg:p-3 area-ads">
+            </section>
+        </div>
+    </div><main class="lg:p-3 text-custom-text">
     <div class="container-fluid">
     <div class="flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-9 gap-6">
-      <section class="my-12 area-single-popular lg:col-span-6 xl:col-span-9">
-            <h2 class="text-[1.3rem] font-bold text-white mb-6">Popular Games</h2>
-            <div class="list-single-game list-game">
+      <section class="my-12 lg:p-3 area-single-popular lg:col-span-6 xl:col-span-9">
+                <div class="flex gap-2 mb-7 items-center text-white">
+                    <h2 class="text-[1.3rem] font-bold">Popular Games</h2>
+                </div>
+                <div class="list-single-game list-game">
                 <a href="/mr-bullet.html" title="Mr Bullet" class="block relative item_home">
                     <div class="aspect-square rounded-[4px] overflow-hidden ">
                         <img data-src="/uploads/mr-bullet-thumbnail.jpg" src="https://placehold.co/500x500?text=no%20image" class="lazyload img-lazy aspect-square" alt="Mr Bullet">
@@ -260,9 +256,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         Mr Bullet
                     </h3>
                     
-                        <div class="label-game">
+                        <div class="label-game type_2">
                             <span class="text-xs uppercase font-bold text-white">
-                                hot
+                                Popular games
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
     <path d="M9.23977 4.63031C8.94941 3.85943 8.52603 3.14548 7.98891 2.52094C7.05937 1.44492 5.83711 0.75 4.875 0.75C4.81779 0.750043 4.76135 0.763174 4.71 0.788388C4.65865 0.813602 4.61375 0.850231 4.57873 0.895471C4.54371 0.940711 4.51951 0.993363 4.50798 1.0494C4.49645 1.10543 4.49789 1.16336 4.51219 1.21875C4.83727 2.46094 4.16344 3.49383 3.45023 4.58719C2.85938 5.49281 2.25 6.4282 2.25 7.5C2.25 9.56766 3.93234 11.25 6 11.25C8.06766 11.25 9.75 9.56766 9.75 7.5C9.75 6.48516 9.57844 5.51977 9.23977 4.63031ZM6.75773 9.81305C6.51562 10.0709 6.21211 10.125 6 10.125C5.78789 10.125 5.48437 10.0709 5.24227 9.81305C5.00016 9.55523 4.875 9.14625 4.875 8.625C4.875 8.03578 5.08172 7.58719 5.28141 7.15359C5.39742 6.90188 5.51578 6.6457 5.58609 6.37148C5.59356 6.34166 5.60825 6.31412 5.62886 6.29131C5.64947 6.26849 5.67538 6.2511 5.7043 6.24065C5.73322 6.23021 5.76427 6.22704 5.7947 6.23142C5.82514 6.2358 5.85403 6.2476 5.87883 6.26578C6.09319 6.43163 6.28379 6.6261 6.44531 6.84375C6.87117 7.40625 7.125 8.07234 7.125 8.625C7.125 9.14625 6.99797 9.55711 6.75773 9.81305Z" fill="white" />
@@ -277,9 +273,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         Drive Mad
                     </h3>
                     
-                        <div class="label-game">
+                        <div class="label-game type_2">
                             <span class="text-xs uppercase font-bold text-white">
-                                hot
+                                Popular games
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
     <path d="M9.23977 4.63031C8.94941 3.85943 8.52603 3.14548 7.98891 2.52094C7.05937 1.44492 5.83711 0.75 4.875 0.75C4.81779 0.750043 4.76135 0.763174 4.71 0.788388C4.65865 0.813602 4.61375 0.850231 4.57873 0.895471C4.54371 0.940711 4.51951 0.993363 4.50798 1.0494C4.49645 1.10543 4.49789 1.16336 4.51219 1.21875C4.83727 2.46094 4.16344 3.49383 3.45023 4.58719C2.85938 5.49281 2.25 6.4282 2.25 7.5C2.25 9.56766 3.93234 11.25 6 11.25C8.06766 11.25 9.75 9.56766 9.75 7.5C9.75 6.48516 9.57844 5.51977 9.23977 4.63031ZM6.75773 9.81305C6.51562 10.0709 6.21211 10.125 6 10.125C5.78789 10.125 5.48437 10.0709 5.24227 9.81305C5.00016 9.55523 4.875 9.14625 4.875 8.625C4.875 8.03578 5.08172 7.58719 5.28141 7.15359C5.39742 6.90188 5.51578 6.6457 5.58609 6.37148C5.59356 6.34166 5.60825 6.31412 5.62886 6.29131C5.64947 6.26849 5.67538 6.2511 5.7043 6.24065C5.73322 6.23021 5.76427 6.22704 5.7947 6.23142C5.82514 6.2358 5.85403 6.2476 5.87883 6.26578C6.09319 6.43163 6.28379 6.6261 6.44531 6.84375C6.87117 7.40625 7.125 8.07234 7.125 8.625C7.125 9.14625 6.99797 9.55711 6.75773 9.81305Z" fill="white" />
@@ -294,9 +290,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         Boxing Random
                     </h3>
                     
-                        <div class="label-game">
+                        <div class="label-game type_2">
                             <span class="text-xs uppercase font-bold text-white">
-                                hot
+                                Popular games
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
     <path d="M9.23977 4.63031C8.94941 3.85943 8.52603 3.14548 7.98891 2.52094C7.05937 1.44492 5.83711 0.75 4.875 0.75C4.81779 0.750043 4.76135 0.763174 4.71 0.788388C4.65865 0.813602 4.61375 0.850231 4.57873 0.895471C4.54371 0.940711 4.51951 0.993363 4.50798 1.0494C4.49645 1.10543 4.49789 1.16336 4.51219 1.21875C4.83727 2.46094 4.16344 3.49383 3.45023 4.58719C2.85938 5.49281 2.25 6.4282 2.25 7.5C2.25 9.56766 3.93234 11.25 6 11.25C8.06766 11.25 9.75 9.56766 9.75 7.5C9.75 6.48516 9.57844 5.51977 9.23977 4.63031ZM6.75773 9.81305C6.51562 10.0709 6.21211 10.125 6 10.125C5.78789 10.125 5.48437 10.0709 5.24227 9.81305C5.00016 9.55523 4.875 9.14625 4.875 8.625C4.875 8.03578 5.08172 7.58719 5.28141 7.15359C5.39742 6.90188 5.51578 6.6457 5.58609 6.37148C5.59356 6.34166 5.60825 6.31412 5.62886 6.29131C5.64947 6.26849 5.67538 6.2511 5.7043 6.24065C5.73322 6.23021 5.76427 6.22704 5.7947 6.23142C5.82514 6.2358 5.85403 6.2476 5.87883 6.26578C6.09319 6.43163 6.28379 6.6261 6.44531 6.84375C6.87117 7.40625 7.125 8.07234 7.125 8.625C7.125 9.14625 6.99797 9.55711 6.75773 9.81305Z" fill="white" />
@@ -311,9 +307,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         Bouncy Woods
                     </h3>
                     
-                        <div class="label-game">
+                        <div class="label-game type_2">
                             <span class="text-xs uppercase font-bold text-white">
-                                hot
+                                Popular games
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
     <path d="M9.23977 4.63031C8.94941 3.85943 8.52603 3.14548 7.98891 2.52094C7.05937 1.44492 5.83711 0.75 4.875 0.75C4.81779 0.750043 4.76135 0.763174 4.71 0.788388C4.65865 0.813602 4.61375 0.850231 4.57873 0.895471C4.54371 0.940711 4.51951 0.993363 4.50798 1.0494C4.49645 1.10543 4.49789 1.16336 4.51219 1.21875C4.83727 2.46094 4.16344 3.49383 3.45023 4.58719C2.85938 5.49281 2.25 6.4282 2.25 7.5C2.25 9.56766 3.93234 11.25 6 11.25C8.06766 11.25 9.75 9.56766 9.75 7.5C9.75 6.48516 9.57844 5.51977 9.23977 4.63031ZM6.75773 9.81305C6.51562 10.0709 6.21211 10.125 6 10.125C5.78789 10.125 5.48437 10.0709 5.24227 9.81305C5.00016 9.55523 4.875 9.14625 4.875 8.625C4.875 8.03578 5.08172 7.58719 5.28141 7.15359C5.39742 6.90188 5.51578 6.6457 5.58609 6.37148C5.59356 6.34166 5.60825 6.31412 5.62886 6.29131C5.64947 6.26849 5.67538 6.2511 5.7043 6.24065C5.73322 6.23021 5.76427 6.22704 5.7947 6.23142C5.82514 6.2358 5.85403 6.2476 5.87883 6.26578C6.09319 6.43163 6.28379 6.6261 6.44531 6.84375C6.87117 7.40625 7.125 8.07234 7.125 8.625C7.125 9.14625 6.99797 9.55711 6.75773 9.81305Z" fill="white" />
@@ -328,9 +324,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         Stick Merge 2
                     </h3>
                     
-                        <div class="label-game">
+                        <div class="label-game type_2">
                             <span class="text-xs uppercase font-bold text-white">
-                                hot
+                                Popular games
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
     <path d="M9.23977 4.63031C8.94941 3.85943 8.52603 3.14548 7.98891 2.52094C7.05937 1.44492 5.83711 0.75 4.875 0.75C4.81779 0.750043 4.76135 0.763174 4.71 0.788388C4.65865 0.813602 4.61375 0.850231 4.57873 0.895471C4.54371 0.940711 4.51951 0.993363 4.50798 1.0494C4.49645 1.10543 4.49789 1.16336 4.51219 1.21875C4.83727 2.46094 4.16344 3.49383 3.45023 4.58719C2.85938 5.49281 2.25 6.4282 2.25 7.5C2.25 9.56766 3.93234 11.25 6 11.25C8.06766 11.25 9.75 9.56766 9.75 7.5C9.75 6.48516 9.57844 5.51977 9.23977 4.63031ZM6.75773 9.81305C6.51562 10.0709 6.21211 10.125 6 10.125C5.78789 10.125 5.48437 10.0709 5.24227 9.81305C5.00016 9.55523 4.875 9.14625 4.875 8.625C4.875 8.03578 5.08172 7.58719 5.28141 7.15359C5.39742 6.90188 5.51578 6.6457 5.58609 6.37148C5.59356 6.34166 5.60825 6.31412 5.62886 6.29131C5.64947 6.26849 5.67538 6.2511 5.7043 6.24065C5.73322 6.23021 5.76427 6.22704 5.7947 6.23142C5.82514 6.2358 5.85403 6.2476 5.87883 6.26578C6.09319 6.43163 6.28379 6.6261 6.44531 6.84375C6.87117 7.40625 7.125 8.07234 7.125 8.625C7.125 9.14625 6.99797 9.55711 6.75773 9.81305Z" fill="white" />
@@ -345,17 +341,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         Rusher Crusher
                     </h3>
                     
-                        <div class="label-game">
+                        <div class="label-game type_2">
                             <span class="text-xs uppercase font-bold text-white">
-                                hot
+                                Popular games
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
     <path d="M9.23977 4.63031C8.94941 3.85943 8.52603 3.14548 7.98891 2.52094C7.05937 1.44492 5.83711 0.75 4.875 0.75C4.81779 0.750043 4.76135 0.763174 4.71 0.788388C4.65865 0.813602 4.61375 0.850231 4.57873 0.895471C4.54371 0.940711 4.51951 0.993363 4.50798 1.0494C4.49645 1.10543 4.49789 1.16336 4.51219 1.21875C4.83727 2.46094 4.16344 3.49383 3.45023 4.58719C2.85938 5.49281 2.25 6.4282 2.25 7.5C2.25 9.56766 3.93234 11.25 6 11.25C8.06766 11.25 9.75 9.56766 9.75 7.5C9.75 6.48516 9.57844 5.51977 9.23977 4.63031ZM6.75773 9.81305C6.51562 10.0709 6.21211 10.125 6 10.125C5.78789 10.125 5.48437 10.0709 5.24227 9.81305C5.00016 9.55523 4.875 9.14625 4.875 8.625C4.875 8.03578 5.08172 7.58719 5.28141 7.15359C5.39742 6.90188 5.51578 6.6457 5.58609 6.37148C5.59356 6.34166 5.60825 6.31412 5.62886 6.29131C5.64947 6.26849 5.67538 6.2511 5.7043 6.24065C5.73322 6.23021 5.76427 6.22704 5.7947 6.23142C5.82514 6.2358 5.85403 6.2476 5.87883 6.26578C6.09319 6.43163 6.28379 6.6261 6.44531 6.84375C6.87117 7.40625 7.125 8.07234 7.125 8.625C7.125 9.14625 6.99797 9.55711 6.75773 9.81305Z" fill="white" />
   </svg>
                         </div>
                 </a>
-            </div>
-        </section>
+                </div>
+            </section>
     </div>
   </div>
     
