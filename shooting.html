@@ -233,9 +233,13 @@
 @media (min-width: 1024px){
   #toggle-search{display:none!important}
 }
-</style><style>/* cms-language-switcher */
-.language-switcher select{background:#111;color:#fff;border:1px solid #374151;border-radius:4px;padding:10px 12px}
-@media(max-width:1023px){.language-switcher{position:absolute;right:56px;top:50%;transform:translateY(-50%);z-index:90}.language-switcher select{max-width:105px;padding:8px}}
+</style><style>/* cms-footer-language-switcher */
+.footer-bottom-lang{border-top:1px solid rgba(255,255,255,.12);padding:10px 0;display:flex;justify-content:flex-end}
+.footer-language-switcher{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:6px 8px;background:rgba(255,255,255,.04);color:#fff}
+.footer-language-switcher select{background:transparent;color:#fff;border:0;outline:0}
+.footer-language-switcher option{color:#111}
+.footer-lang-icon{opacity:.75}
+@media(max-width:768px){.footer-bottom-lang{justify-content:center}}
 </style></head><body  class="">
 
     <div id="adminBar" data-pid="1" data-ptype="p"></div>
@@ -257,12 +261,6 @@
                     <div id="toggle-search" onclick="window.cmsToggleMobileSearch && window.cmsToggleMobileSearch(event)" class="hidden">
                         <img src="/assets/image/svg/toggle_search.svg" alt="toogle search">
                     </div>
-
-                    <div class="language-switcher">
-    <select aria-label="Language" onchange="if(this.value) window.location.href=this.value">
-      <option value="/" selected>🇬🇧 English</option><option value="/id/" >🇮🇩 Indonesia</option>
-    </select>
-  </div>
 
                     <div class="relative hidden lg:block header-search">
                         <form id="search-form" class="search-form">
@@ -597,6 +595,12 @@
             </div>
         </div>
     </section>
+    <div class="footer-bottom-lang"><div class="footer-language-switcher">
+    <span class="footer-lang-icon">◎</span>
+    <select aria-label="Language" onchange="if(this.value) window.location.href=this.value">
+      <option value="/" selected>EN</option><option value="/id/" >ID</option>
+    </select>
+  </div></div>
     </div>
     </footer><button id="btn-page-scroll">↑</button><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="/assets/js/main-head.js"></script><script src="/assets/js/main.js"></script><script src="/assets/js/test.js"></script><script>
 document.addEventListener("click", function(e){
