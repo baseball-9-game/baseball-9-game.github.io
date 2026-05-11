@@ -818,6 +818,102 @@ footer svg{
   }
 </style>
 
+
+<style id="v130-apk-desktop-home-grid-fix">
+  /* Keep mobile behavior, fix desktop APK home grid to match HTML5 */
+  @media (min-width: 1024px){
+    .area-apk-mobile{
+      width:100%!important;
+      max-width:100%!important;
+      clear:both!important;
+    }
+
+    .area-apk-mobile .section-head-row{
+      display:flex!important;
+      align-items:center!important;
+      justify-content:space-between!important;
+      margin-bottom:28px!important;
+      width:100%!important;
+    }
+
+    .area-apk-mobile .section-head-row h2{
+      display:block!important;
+      width:auto!important;
+      margin:0!important;
+      line-height:1.25!important;
+      white-space:normal!important;
+    }
+
+    .area-apk-mobile .view-all-mobile{
+      display:inline-flex!important;
+      align-items:center!important;
+      justify-content:center!important;
+      width:auto!important;
+      margin-left:auto!important;
+      flex:0 0 auto!important;
+    }
+
+    .area-apk-mobile .apk-list-game.list-single-game.list-game{
+      display:grid!important;
+      grid-template-columns:repeat(auto-fill, minmax(136px, 1fr))!important;
+      gap:26px!important;
+      align-items:start!important;
+      width:100%!important;
+      max-width:100%!important;
+    }
+
+    .area-apk-mobile .apk-list-game .apk-item-home,
+    .area-apk-mobile .apk-list-game .item_home{
+      display:block!important;
+      position:relative!important;
+      width:100%!important;
+      min-width:0!important;
+      max-width:160px!important;
+      background:#fff!important;
+      border:1px solid #dbe3ee!important;
+      box-shadow:0 4px 14px rgba(15,23,42,.08)!important;
+      overflow:hidden!important;
+    }
+
+    .area-apk-mobile .apk-list-game .img{
+      display:block!important;
+      width:100%!important;
+      aspect-ratio:1/1!important;
+      overflow:hidden!important;
+      background:#f8fafc!important;
+    }
+
+    .area-apk-mobile .apk-list-game .img img{
+      display:block!important;
+      width:100%!important;
+      height:100%!important;
+      object-fit:cover!important;
+    }
+
+    .area-apk-mobile .apk-list-game .title{
+      display:block!important;
+      position:static!important;
+      width:100%!important;
+      min-height:38px!important;
+      padding:4px 2px!important;
+      background:#fff!important;
+    }
+
+    .area-apk-mobile .apk-list-game .title h3{
+      display:block!important;
+      margin:0!important;
+      color:#111827!important;
+      font-size:16px!important;
+      line-height:19px!important;
+      font-weight:400!important;
+      text-align:left!important;
+      white-space:normal!important;
+      overflow:visible!important;
+      text-shadow:none!important;
+    }
+  }
+</style>
+
 </head><body  class="">
 
     <div id="adminBar" data-pid="1" data-ptype="p"></div>
