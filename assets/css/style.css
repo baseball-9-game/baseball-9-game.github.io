@@ -426,7 +426,7 @@ body {
 }
 .formLogin .title {
   font-size: 130%;
-  color: #000000;
+  color:#ffffff;
 }
 .formLogin .form-group {
   padding: 8px 0;
@@ -646,19 +646,19 @@ body {
   letter-spacing: 0.825px;
 }
 #header .header_sh .form_search .form-controls::-webkit-input-placeholder {
-  color: black;
+  color:#ffffff;
 }
 #header .header_sh .form_search .form-controls::-moz-placeholder {
-  color: black;
+  color:#ffffff;
 }
 #header .header_sh .form_search .form-controls:-ms-input-placeholder {
-  color: black;
+  color:#ffffff;
 }
 #header .header_sh .form_search .form-controls::-ms-input-placeholder {
-  color: black;
+  color:#ffffff;
 }
 #header .header_sh .form_search .form-controls::placeholder {
-  color: black;
+  color:#ffffff;
 }
 #header .header_sh .form_search .btn_search {
   position: absolute;
@@ -695,7 +695,7 @@ body {
           justify-content: center;
 }
 #header .menu_left .logo span {
-  color: black;
+  color:#ffffff;
   font-size: 32px;
 }
 #header .menu_left .item_right {
@@ -2422,10 +2422,10 @@ footer .foot-wrp .copy-right a {
   background-color: red;
 }
 .social .threads {
-  background-color: black;
+  background-color:#ffffff;
 }
 .social .github {
-  background-color: black;
+  background-color:#ffffff;
 }
 .social .dribbble {
   background-color: #EE6996;
@@ -2540,7 +2540,7 @@ footer .foot-wrp .copy-right a {
   font-size: calc(1.275rem + 0.3vw);
   text-transform: uppercase;
   font-family: nulshock-bd;
-  color: black;
+  color:#ffffff;
 }
 .archive_gameplay .more_game {
   margin: 16px 0px;
@@ -2654,7 +2654,7 @@ footer .foot-wrp .copy-right a {
   right: -10px;
   font-size: 30px;
   line-height: 1em;
-  color: black;
+  color:#ffffff;
   background-color: #fff;
   text-align: center;
   border-radius: 50px;
@@ -2864,7 +2864,7 @@ footer .foot-wrp .copy-right a {
   border: 2px solid white;
   padding: 16px 38px;
   background-color: white;
-  color: black;
+  color:#ffffff;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
@@ -2902,7 +2902,7 @@ footer .foot-wrp .copy-right a {
   right: 0;
   left: 0;
   z-index: 10;
-  background-color: black;
+  background-color:#ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3093,7 +3093,7 @@ footer .foot-wrp .copy-right a {
   background-color: #e9ecef;
 }
 .pagination li:hover a {
-  color: black;
+  color:#ffffff;
 }
 
 .random_game {
@@ -4483,3 +4483,48 @@ footer .foot-wrp .copy-right a {
   top: 0;
   z-index: -1;
 }/*# sourceMappingURL=style.css.map */
+
+/* v113 global dark text visibility fix */
+body,
+main,
+section,
+article,
+div,
+p,
+span,
+li,
+td,
+th,
+label,
+small {
+  color: #ffffff;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color:#ffffff !important;
+}
+
+a{
+  color:#ffffff;
+}
+
+.apk-page,
+.apk-page *{
+  color:#ffffff !important;
+}
+
+.home,
+.home *{
+  color:#ffffff;
+}
+
+input,
+textarea,
+select{
+  color:#ffffff;
+}
+
+::placeholder{
+  color:#bdbdbd;
+}
+
