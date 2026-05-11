@@ -749,58 +749,36 @@ footer svg{
 </style>
 
 
-<style id="v127-apk-simple-card">
-  .area-apk-mobile .apk-grid,
-  .apk-category-page .apk-grid{
+
+
+<style id="v128-apk-home-match-html5">
+  .area-apk-mobile .section-head-row{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+  }
+  .area-apk-mobile .section-head-row h2,
+  .apk-category-page h1{
+    color:#111827!important;
+  }
+  .area-apk-mobile .view-all-mobile{
+    margin-left:auto!important;
+    font-size:20px!important;
+    line-height:1!important;
+    color:#111827!important;
+    text-decoration:none!important;
+  }
+  .apk-list-game{
     display:grid!important;
-    grid-template-columns:repeat(auto-fill,minmax(136px,1fr))!important;
-    gap:26px!important;
   }
-
-  .apk-card-simple{
+  .apk-item-home .img,
+  .apk-item-home .title{
     display:block!important;
-    background:#fff!important;
-    border:1px solid #dbe3ee!important;
-    box-shadow:0 4px 14px rgba(15,23,42,.08)!important;
-    overflow:hidden!important;
+  }
+  .apk-item-home .title h3{
     color:#111827!important;
-  }
-
-  .apk-card-simple .apk-thumb{
-    width:100%!important;
-    aspect-ratio:1/1!important;
-    background:#f8fafc!important;
-    overflow:hidden!important;
-  }
-
-  .apk-card-simple .apk-thumb img{
-    width:100%!important;
-    height:100%!important;
-    object-fit:cover!important;
-    display:block!important;
-  }
-
-  .apk-card-simple .apk-title{
-    display:block!important;
-    min-height:38px!important;
-    padding:4px 2px!important;
-    font-size:16px!important;
-    line-height:19px!important;
     font-weight:400!important;
-    color:#111827!important;
-    background:#fff!important;
-  }
-
-  .apk-card-simple .apk-meta{
-    display:none!important;
-  }
-
-  @media(max-width:640px){
-    .area-apk-mobile .apk-grid,
-    .apk-category-page .apk-grid{
-      grid-template-columns:repeat(2,minmax(0,1fr))!important;
-      gap:24px!important;
-    }
+    text-shadow:none!important;
   }
 </style>
 
@@ -1056,28 +1034,56 @@ footer svg{
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
 })();
-</script><main class="container-fluid mt-6 lg:p-3 text-custom-text"><section class="apk-category-page"><div class="section-head-row"><h1>Games Mobile</h1></div><div class="apk-grid"><a class="apk-card apk-card-simple" href="/id/free-fire-max.html" title="Free Fire MAX">
-    <div class="apk-thumb"></div>
-    <div class="apk-title">Free Fire MAX</div>
-  </a><a class="apk-card apk-card-simple" href="/id/monster-hunter-outlanders.html" title="Monster Hunter Outlanders">
-    <div class="apk-thumb"></div>
-    <div class="apk-title">Monster Hunter Outlanders</div>
-  </a><a class="apk-card apk-card-simple" href="/id/bully-anniversary-edition.html" title="Bully: Anniversary Edition">
-    <div class="apk-thumb"><img src="/uploads/bully-anniversary-edition.png" alt="Bully: Anniversary Edition"></div>
-    <div class="apk-title">Bully: Anniversary Edition</div>
-  </a><a class="apk-card apk-card-simple" href="/id/pubg-mobile.html" title="PUBG MOBILE">
-    <div class="apk-thumb"><img src="/uploads/pubg-mobile.png" alt="PUBG MOBILE"></div>
-    <div class="apk-title">PUBG MOBILE</div>
-  </a><a class="apk-card apk-card-simple" href="/id/mini-militia-classic-da2-mmc.html" title="Mini Militia Classic">
-    <div class="apk-thumb"><img src="/uploads/mini-militia-classic-da2-mmc.png" alt="Mini Militia Classic"></div>
-    <div class="apk-title">Mini Militia Classic</div>
-  </a><a class="apk-card apk-card-simple" href="/id/vice-online.html" title="Flex City">
-    <div class="apk-thumb"><img src="/uploads/vice-online.png" alt="Flex City"></div>
-    <div class="apk-title">Flex City</div>
-  </a><a class="apk-card apk-card-simple" href="/id/mobile-legends-bang-bang-us.html" title="Mobile Legends: Bang Bang.US">
-    <div class="apk-thumb"><img src="/uploads/mobile-legends-bang-bang-us.png" alt="Mobile Legends: Bang Bang.US"></div>
-    <div class="apk-title">Mobile Legends: Bang Bang.US</div>
-  </a></div></section></main><footer class=" border-t border-gray-700">
+</script><main class="container-fluid mt-6 lg:p-3 text-custom-text"><section class="apk-category-page"><div class="section-head-row"><h1>Games Mobile</h1></div><div class="list-single-game list-game apk-list-game">                <a href="/id/free-fire-max.html" title="Free Fire MAX" class="block relative item_home apk-item-home">
+                    <div class="img">
+                        
+                    </div>
+                    <div class="title">
+                        <h3>Free Fire MAX</h3>
+                    </div>
+                </a>                <a href="/id/monster-hunter-outlanders.html" title="Monster Hunter Outlanders" class="block relative item_home apk-item-home">
+                    <div class="img">
+                        
+                    </div>
+                    <div class="title">
+                        <h3>Monster Hunter Outlanders</h3>
+                    </div>
+                </a>                <a href="/id/bully-anniversary-edition.html" title="Bully: Anniversary Edition" class="block relative item_home apk-item-home">
+                    <div class="img">
+                        <img data-src="/uploads/bully-anniversary-edition.png" src="https://placehold.co/500x500?text=no%20image" class="lazyload img-lazy aspect-square" alt="Bully: Anniversary Edition">
+                    </div>
+                    <div class="title">
+                        <h3>Bully: Anniversary Edition</h3>
+                    </div>
+                </a>                <a href="/id/pubg-mobile.html" title="PUBG MOBILE" class="block relative item_home apk-item-home">
+                    <div class="img">
+                        <img data-src="/uploads/pubg-mobile.png" src="https://placehold.co/500x500?text=no%20image" class="lazyload img-lazy aspect-square" alt="PUBG MOBILE">
+                    </div>
+                    <div class="title">
+                        <h3>PUBG MOBILE</h3>
+                    </div>
+                </a>                <a href="/id/mini-militia-classic-da2-mmc.html" title="Mini Militia Classic" class="block relative item_home apk-item-home">
+                    <div class="img">
+                        <img data-src="/uploads/mini-militia-classic-da2-mmc.png" src="https://placehold.co/500x500?text=no%20image" class="lazyload img-lazy aspect-square" alt="Mini Militia Classic">
+                    </div>
+                    <div class="title">
+                        <h3>Mini Militia Classic</h3>
+                    </div>
+                </a>                <a href="/id/vice-online.html" title="Flex City" class="block relative item_home apk-item-home">
+                    <div class="img">
+                        <img data-src="/uploads/vice-online.png" src="https://placehold.co/500x500?text=no%20image" class="lazyload img-lazy aspect-square" alt="Flex City">
+                    </div>
+                    <div class="title">
+                        <h3>Flex City</h3>
+                    </div>
+                </a>                <a href="/id/mobile-legends-bang-bang-us.html" title="Mobile Legends: Bang Bang.US" class="block relative item_home apk-item-home">
+                    <div class="img">
+                        <img data-src="/uploads/mobile-legends-bang-bang-us.png" src="https://placehold.co/500x500?text=no%20image" class="lazyload img-lazy aspect-square" alt="Mobile Legends: Bang Bang.US">
+                    </div>
+                    <div class="title">
+                        <h3>Mobile Legends: Bang Bang.US</h3>
+                    </div>
+                </a></div></section></main><footer class=" border-t border-gray-700">
     <div class="container-fluid px-3 mx-auto text-[#E1E1E199] py-[0px!important]">
     <section class="flex flex-wrap mb-4 flex-col gap-4 pt-6 lg:flex-row">
         <div class="lg:w-[calc(40%-8px)]">

@@ -749,58 +749,36 @@ footer svg{
 </style>
 
 
-<style id="v127-apk-simple-card">
-  .area-apk-mobile .apk-grid,
-  .apk-category-page .apk-grid{
+
+
+<style id="v128-apk-home-match-html5">
+  .area-apk-mobile .section-head-row{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+  }
+  .area-apk-mobile .section-head-row h2,
+  .apk-category-page h1{
+    color:#111827!important;
+  }
+  .area-apk-mobile .view-all-mobile{
+    margin-left:auto!important;
+    font-size:20px!important;
+    line-height:1!important;
+    color:#111827!important;
+    text-decoration:none!important;
+  }
+  .apk-list-game{
     display:grid!important;
-    grid-template-columns:repeat(auto-fill,minmax(136px,1fr))!important;
-    gap:26px!important;
   }
-
-  .apk-card-simple{
+  .apk-item-home .img,
+  .apk-item-home .title{
     display:block!important;
-    background:#fff!important;
-    border:1px solid #dbe3ee!important;
-    box-shadow:0 4px 14px rgba(15,23,42,.08)!important;
-    overflow:hidden!important;
+  }
+  .apk-item-home .title h3{
     color:#111827!important;
-  }
-
-  .apk-card-simple .apk-thumb{
-    width:100%!important;
-    aspect-ratio:1/1!important;
-    background:#f8fafc!important;
-    overflow:hidden!important;
-  }
-
-  .apk-card-simple .apk-thumb img{
-    width:100%!important;
-    height:100%!important;
-    object-fit:cover!important;
-    display:block!important;
-  }
-
-  .apk-card-simple .apk-title{
-    display:block!important;
-    min-height:38px!important;
-    padding:4px 2px!important;
-    font-size:16px!important;
-    line-height:19px!important;
     font-weight:400!important;
-    color:#111827!important;
-    background:#fff!important;
-  }
-
-  .apk-card-simple .apk-meta{
-    display:none!important;
-  }
-
-  @media(max-width:640px){
-    .area-apk-mobile .apk-grid,
-    .apk-category-page .apk-grid{
-      grid-template-columns:repeat(2,minmax(0,1fr))!important;
-      gap:24px!important;
-    }
+    text-shadow:none!important;
   }
 </style>
 
@@ -1056,7 +1034,7 @@ footer svg{
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
 })();
-</script><main class="container-fluid mt-6 lg:p-3 text-custom-text"><section class="apk-category-page"><div class="section-head-row"><h1>Sport</h1></div><div class="apk-grid"></div></section></main><footer class=" border-t border-gray-700">
+</script><main class="container-fluid mt-6 lg:p-3 text-custom-text"><section class="apk-category-page"><div class="section-head-row"><h1>Sport</h1></div><div class="list-single-game list-game apk-list-game"></div></section></main><footer class=" border-t border-gray-700">
     <div class="container-fluid px-3 mx-auto text-[#E1E1E199] py-[0px!important]">
     <section class="flex flex-wrap mb-4 flex-col gap-4 pt-6 lg:flex-row">
         <div class="lg:w-[calc(40%-8px)]">
