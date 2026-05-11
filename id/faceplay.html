@@ -90,6 +90,77 @@
 </style>
 
 
+
+<style id="v111-apk-page-visibility-fix">
+  body:has(.apk-page) {
+    background: #f5f7fb !important;
+    color: #07103a !important;
+  }
+
+  body:has(.apk-page) header,
+  body:has(.apk-page) .sidebar,
+  body:has(.apk-page) #navbar-dropdown {
+    background: #000 !important;
+  }
+
+  .apk-page {
+    display: block !important;
+    min-height: 100vh !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    background: #f5f7fb !important;
+    color: #07103a !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .apk-page,
+  .apk-page *:not(.apk-download):not(.apk-download *) {
+    color: #07103a !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .apk-page h1,
+  .apk-page h2,
+  .apk-page h3,
+  .apk-page p,
+  .apk-page nav,
+  .apk-page small,
+  .apk-page b,
+  .apk-page div,
+  .apk-page span,
+  .apk-page li {
+    color: #07103a !important;
+  }
+
+  .apk-hero,
+  .apk-panel {
+    background: #ffffff !important;
+    color: #07103a !important;
+    border: 1px solid #dbe3ef !important;
+    box-shadow: 0 4px 16px rgba(31,41,55,.08) !important;
+  }
+
+  .apk-info-row div,
+  .apk-detail-grid div {
+    background: #f1f5f9 !important;
+    color: #07103a !important;
+  }
+
+  .apk-download,
+  .apk-download * {
+    color: #ffffff !important;
+  }
+
+  .apk-screens h2,
+  .apk-breadcrumb {
+    color: #07103a !important;
+  }
+</style>
+
+
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"FacePlay APK 5.4.6","applicationCategory":"GameApplication","operatingSystem":"Android","softwareVersion":"5.4.6"}</script>
 
 <style>/* cms-mobile-header-fix */
@@ -572,7 +643,11 @@
         <h2>🤝 Komunitas Kreatif</h2>
         <p>FacePlay menawarkan komunitas tempat pengguna dapat berbagi <em>template</em>, efek, dan ide. Unggah konten Anda sendiri dan ubah kreativitas Anda menjadi sumber keterlibatan dan pertumbuhan.</p>
     </section></div></section>
-  
+  <section class="my-6 lg:p-3 area-apk-mobile"><div class="section-head-row"><h2>New Game Mobile</h2><a class="view-all-mobile" href="/id/games-mobile.html">▦</a></div><div class="apk-grid"><a class="apk-card" href="/id/new-apk.html" title="New APK">
+    <div class="apk-thumb"><img src="/uploads/google-chrome.png" alt="New APK"></div>
+    <div class="apk-title">New APK</div>
+    <div class="apk-meta"><span># VERSI<br><b>147.0.7727.138</b></span><span>UKURAN<br><b>37.8 MB</b></span></div>
+  </a></div></section>
   </main><footer class=" border-t border-gray-700">
     <div class="container-fluid px-3 mx-auto text-[#E1E1E199] py-[0px!important]">
     <section class="flex flex-wrap mb-4 flex-col gap-4 pt-6 lg:flex-row">
