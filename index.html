@@ -802,6 +802,22 @@ footer svg{
   }
 </style>
 
+
+<style id="v136-home-grid-section-span-fix">
+  @media (min-width:1024px){
+    .container-fluid > .lg:grid > .area-h1,
+    .container-fluid > .lg:grid > .area-ads,
+    .container-fluid > .lg:grid > .area-single-popular,
+    .container-fluid > .lg:grid > .area-single-new,
+    .container-fluid > .lg:grid > .area-apk-mobile,
+    .container-fluid > .lg:grid > .text-custom-text{
+      grid-column:1 / -1!important;
+      width:100%!important;
+      max-width:100%!important;
+    }
+  }
+</style>
+
 </head><body  class="">
 
     <div id="adminBar" data-pid="1" data-ptype="p"></div>
@@ -1092,11 +1108,11 @@ footer svg{
             </section>
 
             <!-- ads -->
-            <section class="mt-12 lg:p-3 area-ads">
+            <section class="mt-12 lg:p-3 area-ads lg:col-span-6 xl:col-span-9">
             </section>
 
             <!-- popular game -->
-            <section class="my-6 lg:p-3 area-single-popular">
+            <section class="my-6 lg:p-3 area-single-popular lg:col-span-6 xl:col-span-9">
                 <div class="flex gap-2 mb-7 items-center text-white">
                     <h2 class="text-[1.3rem] font-bold">Popular Games</h2>
                 </div>
@@ -1315,7 +1331,7 @@ footer svg{
             </section>
 
             <!-- you may like -->
-            <section class="my-6 lg:p-3 area-single-new">
+            <section class="my-6 lg:p-3 area-single-new lg:col-span-6 xl:col-span-9">
                 <div class="flex gap-2 mb-7 items-center text-white">
                     <h2 class="text-[1.3rem] font-bold">You May Like</h2>
                 </div>
@@ -1538,7 +1554,7 @@ footer svg{
 
         </div>
 
-    <section class="my-6 text-custom-text">
+    <section class="my-6 text-custom-text lg:col-span-6 xl:col-span-9">
         <div class="content p-5 bg-custom-bg rounded-[15px]">
         <p>Enjoy a fast-paced, realistic baseball game featuring compact gameplay and informative stats. Play <strong>BASEBALL NINE</strong> now to become the Legend League Champion!</p>
 
