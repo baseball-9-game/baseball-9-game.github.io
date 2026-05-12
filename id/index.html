@@ -37,17 +37,7 @@
 
     <script> var domain = "", token = "", langid = `id`, ismainlang = `1`, ldomain = (ismainlang) ? domain : `${domain}/${langid}`; </script>
 
-    <style id="v29-header-toggle-css">
-      .sidebar.open-nav{display:flex!important;}
-      .header-search.open-search{display:block!important;position:absolute;top:64px;left:16px;right:16px;z-index:30;background:#000;padding:10px;border-radius:8px;}
-      @media (min-width:1024px){.header-search.open-search{position:static;background:transparent;padding:0;}}
-      .header-search{position:relative;}
-      .search-results-dropdown{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:50;background:#111;border:1px solid #374151;border-radius:8px;overflow:hidden;min-width:260px;box-shadow:0 10px 30px rgba(0,0,0,.35);}
-      .search-result-item{display:flex;align-items:center;gap:10px;padding:8px 10px;color:#fff;text-decoration:none;border-bottom:1px solid #222;}
-      .search-result-item:hover{background:#1f2937;}
-      .search-result-item img{width:42px;height:42px;object-fit:cover;border-radius:6px;background:#222;}
-      .search-empty{padding:12px;color:#d1d5db;}
-    </style>
+    
 
 
 
@@ -62,97 +52,6 @@
 
 
 
-<style id="v115-apkpure-layout-css">
-  body:has(.apkpure-style){background:#f2f5f9!important;color:#5e5e5e!important;}
-  body:has(.apkpure-style) header,
-  body:has(.apkpure-style) .sidebar,
-  body:has(.apkpure-style) #navbar-dropdown{background:#fff!important;color:#5e5e5e!important;border-color:#e5e7eb!important;}
-  body:has(.apkpure-style) header *,
-  body:has(.apkpure-style) .sidebar *,
-  body:has(.apkpure-style) #navbar-dropdown *{color:#5e5e5e!important;}
-
-  .apkpure-style{
-    max-width:1180px!important;
-    margin:0 auto!important;
-    padding:18px 16px 42px!important;
-    background:#f2f5f9!important;
-    color:#5e5e5e!important;
-    font-family:Arial,"Helvetica Neue",Helvetica,sans-serif!important;
-  }
-  .apkpure-style *{box-sizing:border-box;}
-  .apkpure-style a{color:#5e5e5e!important;text-decoration:none!important;}
-  .apk-breadcrumb{
-    display:flex!important;align-items:center!important;gap:8px!important;
-    margin:0 0 14px!important;font-size:13px!important;color:#8a94a6!important;
-  }
-  .apk-breadcrumb strong{font-weight:500!important;color:#5e5e5e!important;}
-
-  .apkp-head-card{
-    background:#fff!important;border:1px solid #e1e7ef!important;border-radius:0!important;
-    box-shadow:none!important;margin:0 0 16px!important;overflow:hidden!important;padding:0!important;
-  }
-  .apkp-top{display:grid!important;grid-template-columns:110px 1fr 330px!important;gap:18px!important;padding:22px!important;align-items:start!important;}
-  .apkp-icon img{width:86px!important;height:86px!important;border-radius:18px!important;object-fit:cover!important;display:block!important;}
-  .apkp-info h1{font-size:22px!important;line-height:1.2!important;margin:0 0 8px!important;color:#444!important;font-weight:700!important;}
-  .apkp-dev,.apkp-version{display:block!important;font-size:14px!important;line-height:1.8!important;color:#777!important;}
-  .apkp-tags{display:flex!important;flex-wrap:wrap!important;gap:8px!important;margin-top:10px!important;}
-  .apkp-tags span{border:1px solid #dbeafe!important;background:#eff6ff!important;color:#2563eb!important;border-radius:18px!important;padding:5px 10px!important;font-size:12px!important;}
-
-  .apkp-download-box{display:flex!important;flex-direction:column!important;gap:10px!important;}
-  .apkp-download{
-    display:flex!important;align-items:center!important;justify-content:space-between!important;
-    width:100%!important;background:#24cd77!important;color:#fff!important;
-    border-radius:4px!important;padding:13px 16px!important;font-size:15px!important;font-weight:700!important;
-  }
-  .apkp-download *{color:#fff!important;}
-  .apkp-secondary,.apkp-howto{
-    display:block!important;background:#f3f7fb!important;border:1px solid #e1e7ef!important;border-radius:4px!important;
-    padding:10px 14px!important;text-align:center!important;font-size:13px!important;color:#4b9fe8!important;
-  }
-  .apkp-stats{
-    display:grid!important;grid-template-columns:repeat(5,1fr)!important;list-style:none!important;
-    margin:0!important;padding:14px 12px!important;background:#f7f9fc!important;border-top:1px solid #e5eaf2!important;
-  }
-  .apkp-stats li{text-align:center!important;border-right:1px solid #e5eaf2!important;padding:4px 8px!important;color:#8a94a6!important;}
-  .apkp-stats li:last-child{border-right:0!important;}
-  .apkp-stats .head{font-size:14px!important;color:#5e5e5e!important;font-weight:600!important;min-height:22px!important;}
-  .apkp-stats .desc{font-size:12px!important;color:#9aa3af!important;margin-top:4px!important;}
-
-  .apkpure-style .apk-panel{
-    background:#fff!important;color:#5e5e5e!important;border:1px solid #e1e7ef!important;border-radius:0!important;
-    box-shadow:none!important;padding:18px!important;margin:0 0 16px!important;
-  }
-  .apkpure-style .apk-panel h2,.apkp-screens h2{
-    color:#333!important;font-size:18px!important;margin:0 0 14px!important;font-weight:700!important;
-  }
-  .apkpure-style .apk-panel div,.apkpure-style .apk-panel p,.apkpure-style .apk-panel li,.apkpure-style .apk-panel span,.apkpure-style .apk-panel b{
-    color:#5e5e5e!important;font-size:14px!important;line-height:1.75!important;
-  }
-  .apkpure-style .apk-detail-grid{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:0!important;border:1px solid #eef2f6!important;}
-  .apkpure-style .apk-detail-grid div{
-    border-right:1px solid #eef2f6!important;border-bottom:1px solid #eef2f6!important;background:#fff!important;border-radius:0!important;padding:14px!important;
-  }
-  .apkpure-style .apk-detail-grid small{display:block!important;text-transform:none!important;letter-spacing:0!important;color:#888!important;font-size:13px!important;margin-bottom:6px!important;}
-  .apkpure-style .apk-detail-grid b{color:#444!important;font-size:14px!important;}
-
-  .apkp-screens{margin:0 0 16px!important;background:#fff!important;border:1px solid #e1e7ef!important;padding:18px!important;}
-  .apkp-screens .section-head-row{display:flex!important;align-items:center!important;justify-content:space-between!important;margin:0 0 14px!important;}
-  .apkp-screens .section-head-row span{color:#8a94a6!important;font-size:13px!important;}
-  .apkp-screens>div:last-child{display:flex!important;gap:14px!important;overflow-x:auto!important;padding-bottom:8px!important;}
-  .apkp-screens img{height:420px!important;border-radius:6px!important;object-fit:cover!important;border:1px solid #e5e7eb!important;}
-
-  .apkp-bottom-download{max-width:260px!important;margin:20px auto!important;justify-content:center!important;gap:10px!important;border-radius:6px!important;}
-  .apkpure-style .area-apk-mobile h2,.apkpure-style .section-head-row h2{color:#333!important;}
-  .apkpure-style .apk-card .apk-title,.apkpure-style .apk-card .apk-meta *{color:#fff!important;}
-
-  @media(max-width:900px){
-    .apkp-top{grid-template-columns:86px 1fr!important;}
-    .apkp-download-box{grid-column:1 / -1!important;}
-    .apkp-stats{grid-template-columns:repeat(2,1fr)!important;}
-    .apkpure-style .apk-detail-grid{grid-template-columns:1fr!important;}
-    .apkp-screens img{height:320px!important;}
-  }
-</style>
 
 
 
@@ -378,11 +277,6 @@
 
 
 
-<style id="v132-apk-section-html5-sync">
-.area-apk-mobile > .flex{width:100%!important;align-items:center!important}
-.area-apk-mobile > .flex h2{white-space:nowrap!important;margin:0!important}
-.area-apk-mobile .view-all-mobile{margin-left:auto!important;color:#111827!important;text-decoration:none!important;flex:0 0 auto!important}
-</style>
 
 
 
@@ -943,7 +837,7 @@
             </section>
 
             <!-- new games mobile -->
-            <section class="my-6 lg:p-3 area-single-new area-apk-mobile lg:col-span-6 xl:col-span-9">
+            <section class="my-6 lg:p-3 area-apk-mobile lg:col-span-6 xl:col-span-9">
                 <div class="flex gap-2 mb-7 items-center text-white">
                     <h2 class="text-[1.3rem] font-bold">New Games Mobile</h2>
                     <a class="view-all-mobile ml-auto" href="/id/games-mobile.html" title="New Games Mobile">▦</a>
