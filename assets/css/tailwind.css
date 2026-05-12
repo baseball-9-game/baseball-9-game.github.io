@@ -2311,47 +2311,111 @@
   }
 }
 
-/* v113 global dark text visibility fix */
-body,
-main,
-section,
-article,
-div,
-p,
-span,
-li,
-td,
-th,
-label,
-small {
-  color: #ffffff;
+/* v137 clean light theme + home section layout */
+:root{
+  --site-bg:#f4f6f9;
+  --site-head:#bfbfbf;
+  --site-card:#ffffff;
+  --site-soft:#f8fafc;
+  --site-border:#dbe3ee;
+  --site-text:#111827;
+  --site-muted:#64748b;
+  --site-link:#2563eb;
+  --site-mobile:#2563eb;
 }
-
-h1,h2,h3,h4,h5,h6{
-  color:#ffffff !important;
+html,body{
+  background:var(--site-bg);
+  color:var(--site-text);
 }
-
-a{
-  color:#ffffff;
+body,main,section,article,div,p,span,li,td,th,label,small,b,strong,h1,h2,h3,h4,h5,h6{
+  color:var(--site-text);
 }
-
-.apk-page,
-.apk-page *{
-  color:#ffffff !important;
+a{color:var(--site-link);}
+header,nav,footer,.header,.navbar,.site-header,.site-footer,.topbar,.lg\:bg-black{
+  background:var(--site-head)!important;
+  color:var(--site-text)!important;
+  border-color:var(--site-border)!important;
 }
-
-.home,
-.home *{
-  color:#ffffff;
+header *,nav *,footer *,.header *,.navbar *,.site-header *,.site-footer *,.topbar *{
+  color:var(--site-text)!important;
 }
-
-input,
-textarea,
-select{
-  color:#ffffff;
+input,textarea,select{
+  background:#fff!important;
+  color:var(--site-text)!important;
+  border:1px solid #cbd5e1!important;
 }
-
-::placeholder{
-  color:#bdbdbd;
+input::placeholder,textarea::placeholder{color:#94a3b8!important;}
+.container-fluid,.apk-page,.apkpure-style{background:var(--site-bg);color:var(--site-text);}
+.area-h1,.content,.game-container,.bg-custom-bg,.apk-panel,.apkp-head-card,.apkp-screens,.list-single-game,.list-game,.item_home,.apk-card{
+  background:var(--site-card);
+  color:var(--site-text);
 }
-
+.area-h1,.content,.apk-panel,.apkp-head-card,.apkp-screens{
+  border:1px solid var(--site-border);
+  box-shadow:0 4px 14px rgba(15,23,42,.06);
+}
+.item_home,.apk-card{
+  border:1px solid var(--site-border);
+  box-shadow:0 4px 14px rgba(15,23,42,.08);
+  overflow:hidden;
+}
+.item_home .title h3,.apk-card .title h3{
+  color:var(--site-text)!important;
+  text-shadow:none!important;
+}
+.mobile-menu,.sidebar-menu,.nav-mobile,.menu-mobile,.category-menu,.offcanvas,.drawer-menu,#navbar-dropdown,.sidebar{
+  background:var(--site-card)!important;
+  color:var(--site-text)!important;
+  border-color:var(--site-border)!important;
+}
+.mobile-menu *,.sidebar-menu *,.nav-mobile *,.menu-mobile *,.category-menu *,.offcanvas *,.drawer-menu *,#navbar-dropdown *,.sidebar *{
+  color:var(--site-text)!important;
+}
+.label-game,.hot-label,.badge{color:#fff!important;}
+.label-game *,.hot-label *,.badge *{color:#fff!important;}
+.apk-mobile-card .label-mobile{
+  background:linear-gradient(90deg,#2563eb,#06b6d4)!important;
+  color:#fff!important;
+}
+.apk-mobile-card .label-mobile *{color:#fff!important;}
+.apkp-download,.apkp-download *,.apk-download,.apk-download *{
+  background:#22c55e!important;
+  color:#fff!important;
+}
+.apk-breadcrumb,.apk-breadcrumb *,.apkp-dev,.apkp-version,.apkp-stats .desc,.apk-detail-grid small{
+  color:var(--site-muted)!important;
+}
+.apkp-stats,.apk-detail-grid div,.apk-info-row div{
+  background:var(--site-soft)!important;
+  border-color:var(--site-border)!important;
+}
+footer .social{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-items:center!important;
+  gap:18px!important;
+  list-style:none!important;
+  margin:0!important;
+  padding:0!important;
+}
+footer .social svg,footer .social img{display:none!important;}
+footer .social a{
+  display:inline-flex!important;
+  background:transparent!important;
+  color:var(--site-text)!important;
+  text-decoration:none!important;
+  padding:4px 8px!important;
+}
+@media (min-width:1024px){
+  .container-fluid > .lg\:grid > .area-h1,
+  .container-fluid > .lg\:grid > .area-ads,
+  .container-fluid > .lg\:grid > .area-single-popular,
+  .container-fluid > .lg\:grid > .area-single-new,
+  .container-fluid > .lg\:grid > .area-apk-mobile,
+  .container-fluid > .lg\:grid > .text-custom-text{
+    grid-column:1 / -1!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
